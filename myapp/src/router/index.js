@@ -1,15 +1,45 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import First_stage from '@/components/first_stage'
+import Home from '@/components/first_stage/home'
+import Magazine from '@/components/first_stage/magazine'
+import Designer from '@/components/first_stage/designer'
+import My from '@/components/first_stage/my'
 
-Vue.use(Router)
+
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
+      path:'/',
+      redirect:'/home'
+    },
+    {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      component: First_stage,
+      children: [
+        {
+          path: 'home',
+          name: 'home',
+          component: Home
+        },
+        {
+          path: 'magazine',
+          name: 'magazine',
+          component: Magazine
+        },
+        {
+          path: 'designer',
+          name: 'designer',
+          component: Designer
+        },
+        {
+          path: 'my',
+          name: 'my',
+          component: My
+        }
+      ]
     }
   ]
 })
