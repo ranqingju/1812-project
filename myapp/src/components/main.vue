@@ -1,13 +1,12 @@
 <template>
   <div class="first_stage">
-    <h2>第一级页面</h2>
-    <footer-com></footer-com>
     <router-view></router-view>
+    <footer-com></footer-com>
   </div>
 </template>
 
 <script>
-  import Footer from './first_stage/common/footer'
+  import Footer from './main/common/footer'
 
   export default {
     components:{

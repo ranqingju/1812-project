@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import First_stage from '@/components/first_stage'
-import Home from '@/components/first_stage/home'
-import Magazine from '@/components/first_stage/magazine'
-import Designer from '@/components/first_stage/designer'
-import My from '@/components/first_stage/my'
+import Main from '@/components/main'
+import Home from '@/components/main/home'
+import Magazine from '@/components/main/magazine'
+import Designer from '@/components/main/designer'
+import My from '@/components/main/my'
 
 
 Vue.use(Router);
@@ -17,7 +17,7 @@ export default new Router({
     },
     {
       path: '/',
-      component: First_stage,
+      component: Main,
       children: [
         {
           path: 'home',
