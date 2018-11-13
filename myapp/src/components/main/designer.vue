@@ -1,13 +1,13 @@
 <template>
-    <div class="designer">
-      designer
-    </div>
+  <div class="page designer">
+    designer
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "designer"
-    }
+  export default {
+    name: "designer"
+  }
 </script>
 
 <style scoped>
