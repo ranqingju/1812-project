@@ -7,6 +7,7 @@
             <h2>双十一剁手清单：你最想买的家居用品是什么</h2>
             <p>这个双十一你准备买什么？是屯点日常用品秒杀小家电，还是给家里添加家具呢?</p>
             <h3>分享你的剁手清单，也说说你的购物心得吧</h3>
+            <div class="xian"></div>
         </div>
         <div class="center">
 
@@ -50,6 +51,12 @@ export default {
     color: #34343D;
     font-size: .24rem;
     margin-top: .87rem;
+}
+.qingdan>.xian{
+    width:5rem;
+    height: .02rem;
+    background: #DCDCDC;
+    margin-top: .35rem;
 }
 .center{
 
