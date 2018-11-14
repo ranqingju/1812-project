@@ -56,12 +56,12 @@ export default new Router({
       component: Login
     },
     {
-      path: '/house/houseCase',
+      path: '/home/house/houseCase',
       name: 'houseCase',
       component: houseCase
     },
     {
-      path:'/house/houseCaseList',
+      path:'/home/house/houseCaseList',
       name:'houseCaseList',
       component:houseCaseList
     }
