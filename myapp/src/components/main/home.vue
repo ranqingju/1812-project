@@ -26,5 +26,6 @@
 	.home_center {
 		flex: 1;
 		overflow: auto;
+		background:#f3f2f0
 	}
 </style>

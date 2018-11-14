@@ -1,6 +1,6 @@
 <template>
 	<div id="header_f">
-		<div>
+		<div @click='handleGoToWe()'>
 			<span class="iconfont">&#xe603;</span>
 			<p>会员福利</p>
 		</div>
@@ -17,7 +17,11 @@
 
 <script>
 	export default {
-
+		methods: {
+			handleGoToWe() {
+				this.$router.push('/my/weal');
+			}
+		}
 	}
 </script>
 
