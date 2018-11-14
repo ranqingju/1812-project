@@ -15,6 +15,10 @@ import Login from '@/components/other/my/login'
 import houseCase from '@/components/other/home/house/houseCase';
 import houseCaseList from '@/components/other/home/house/houseCaseList';
 
+/*话题讨论*/
+import Discuss from '@/components/other/home/discuss/discuss' 
+import Discussdetails from '@/components/other/home/discuss/discussdetails'
+
 
 Vue.use(Router);
 
@@ -64,6 +68,17 @@ export default new Router({
       path:'/house/houseCaseList',
       name:'houseCaseList',
       component:houseCaseList
+    },
+    {
+      path:'/discuss/discuss',
+      name:'discuss',
+      component:Discuss
+    },
+    {
+      path:'/discuss/discussdetails',
+      name:'discussdetails',
+      component:Discussdetails
+
     }
   ]
 })
