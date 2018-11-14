@@ -72,7 +72,7 @@ export default new Router({
       component: houseCase
     },
     {
-      path:'/house/houseCaseList',
+      path:'/home/house/houseCaseList',
       name:'houseCaseList',
       component:houseCaseList
     },
