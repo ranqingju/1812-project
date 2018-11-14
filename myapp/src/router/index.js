@@ -11,6 +11,8 @@ import Designer from '@/components/main/designer'
 import My from '@/components/main/my'
 /*登录*/
 import Login from '@/components/other/my/login'
+/*注册*/
+import Register from '@/components/other/my/register'
 
 import houseCase from '@/components/other/home/house/houseCase';
 import houseCaseList from '@/components/other/home/house/houseCaseList';
@@ -56,14 +58,19 @@ export default new Router({
       component: Login
     },
     {
+      path: '/register',
+      name: 'register',
+      component: Register
+    },
+    {
       path: '/house/houseCase',
       name: 'houseCase',
       component: houseCase
     },
     {
-      path:'/house/houseCaseList',
-      name:'houseCaseList',
-      component:houseCaseList
+      path: '/house/houseCaseList',
+      name: 'houseCaseList',
+      component: houseCaseList
     }
   ]
 })
