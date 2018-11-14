@@ -17,8 +17,13 @@
 </script>
 
 <style scoped>
+	.main{
+		height: 100%;
+	}
   .page {
-    margin-bottom: 49px;
-    overflow-y: auto !important;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+    padding-bottom: 0.98rem;
   }
 </style>
