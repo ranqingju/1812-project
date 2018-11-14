@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import HouseCase from './HouseCase';
-import Login from './login'
+
+import Login from './login';
+import Discuss from './discuss';
+
 
 Vue.use(Vuex);
 
@@ -20,7 +23,8 @@ const store = new Vuex.Store({
   getters,
   modules: {
     HouseCase,
-    Login
+    Login,
+    Discuss,
   }
 });
 

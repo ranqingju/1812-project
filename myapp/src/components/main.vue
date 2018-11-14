@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="main">
     <router-view></router-view>
     <footer-com></footer-com>
@@ -6,14 +6,14 @@
 </template>
 
 <script>
-  /*引入底部*/
-  import Footer from './main/common/footer'
+/*引入底部*/
+import Footer from "./main/common/footer";
 
-  export default {
-    components: {
-      'footer-com': Footer
-    }
+export default {
+  components: {
+    "footer-com": Footer
   }
+};
 </script>
 
 <style scoped>
