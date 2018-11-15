@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+
 import HouseCase from './HouseCase';
 
 import Login from './login';

@@ -1,22 +1,24 @@
-﻿import Vue from 'vue'
-import Router from 'vue-router'
-import Main from '@/components/main'
+﻿import Vue from 'vue';
+import Router from 'vue-router';
+import Main from '@/components/main';
 /*首页*/
-import Home from '@/components/main/home'
+import Home from '@/components/main/home';
 /*杂志*/
-import Magazine from '@/components/main/magazine'
+import Magazine from '@/components/main/magazine';
 /*设计者*/
-import Designer from '@/components/main/designer'
+import Designer from '@/components/main/designer';
 /*我的*/
-import My from '@/components/main/my'
+import My from '@/components/main/my';
 /*登录*/
-import Login from '@/components/other/my/login'
+import Login from '@/components/other/my/login';
 /*注册*/
-import Register from '@/components/other/my/register'
+import Register from '@/components/other/my/register';
 
 /*整屋案例*/
 import houseCase from '@/components/other/home/house/houseCase';
 import houseCaseList from '@/components/other/home/house/houseCaseList';
+/*我的收藏*/
+import houseCollect from '@/components/other/home/house/houseCollect';
 
 /*话题讨论*/
 import Discuss from '@/components/other/home/discuss/discuss'
@@ -90,7 +92,7 @@ export default new Router({
       component: Register
     },
     {
-      path: '/house/houseCase',
+      path: '/home/house/houseCase',
       name: 'houseCase',
       component: houseCase
     },
@@ -133,6 +135,11 @@ export default new Router({
       path: "/home/problem",
       name: 'problem',
       component: Problem
+    },
+    {
+      path:'/home/house/houseCollect',
+      name:'houseCollect',
+      component:houseCollect
     },
     {
       path: '/home/problem/answer',
