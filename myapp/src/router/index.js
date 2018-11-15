@@ -26,7 +26,6 @@ import Discussdetails from '@/components/other/home/discuss/discussdetails'
 import Dwell from '@/components/other/home/dwell/dwell'
 import Weal from '@/components/other/my/weal'
 
-
 /*话题收藏*/
 import Topic_col from '@/components/other/my/topic_col'
 
@@ -45,10 +44,8 @@ import Problem from '@/components/other/home/problem/problem'
 /*回答*/
 import Answer from '@/components/other/home/problem/answer'
 
-
 /*电脑做案列*/
 import Case from '@/components/other/home/case/case'
-
 
 /* 视频与直播 */
 import VideoLive from '@/components/other/home/video/videolive'
@@ -57,7 +54,15 @@ import VideoLive from '@/components/other/home/video/videolive'
 import Activity from '@/components/other/home/freetrial/activity'
 import Report from '@/components/other/home/freetrial/report'
 
+/* 装修攻略 */
+import Finish from '@/components/other/home/finish/finish';
+// 前期准备
+import previous from '@/components/other/home/finish/previous';
+// 二级搜索
+import seek from '@/components/other/home/seek/seek';
 
+// 积分兑换
+import credits from '@/components/other/home/credits/credits';
 Vue.use(Router);
 
 export default new Router({
@@ -184,6 +189,26 @@ export default new Router({
 			path: '/my/weal',
 			name: 'weal',
 			component: Weal
+		},
+		{
+			path: '/previous',
+			name: 'previous',
+			component: previous
+		},
+		{
+			path: '/credits',
+			name: 'credits',
+			component: credits
+		},
+		{
+			path: '/seek',
+			name: 'seek',
+			component: seek
+		},
+		{
+			path: '/finish',
+			name: 'finish',
+			component: Finish
 		},
 		{
 			path: '**',
