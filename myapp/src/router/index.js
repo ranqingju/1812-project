@@ -1,4 +1,4 @@
-﻿import Vue from 'vue'
+import Vue from 'vue'
 import Router from 'vue-router'
 import Main from '@/components/main'
 /*首页*/
@@ -21,6 +21,12 @@ import houseCaseList from '@/components/other/home/house/houseCaseList';
 import Discuss from '@/components/other/home/discuss/discuss' 
 import Discussdetails from '@/components/other/home/discuss/discussdetails'
 
+/* 视频与直播 */
+import VideoLive from '@/components/other/home/video/videolive' 
+
+/* 免费试用 */
+import Activity from '@/components/other/home/freetrial/activity' 
+import Report from '@/components/other/home/freetrial/report' 
 
 Vue.use(Router);
 
@@ -85,6 +91,21 @@ export default new Router({
       path:'/discuss/discussdetails',
       name:'discussdetails',
       component:Discussdetails
-    }
+    },
+		{
+			path:'/video/videolive',
+			name:'videolive',
+			component:VideoLive
+		},
+		{
+			path:'/freetrial/activity',
+			name:'activity',
+			component:Activity
+		},
+		{
+			path:'/freetrial/report',
+			name:'report',
+			component:Report
+		}
   ]
 })
