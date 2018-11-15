@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="user-img">
-      <img src="static/login/img_login.jpg" />
+      <img src="static/login/img_login.jpg"/>
     </div>
     <div class="form">
       <p>
@@ -21,13 +21,14 @@
 
 <script>
   import Vuex from 'vuex'
+
   export default {
     data() {
       return {
         pwd_show_hide: '&#xe609;',
         pwd_txt: 'password',
-        user_login:"",
-        pwd_login:''
+        user_login: "",
+        pwd_login: ''
       }
     },
     methods: {
@@ -43,10 +44,10 @@
       },
       /*跳转到注册页面*/
       handleGoTo() {
-        this.$router.push('/register');
+        this.$router.push('/my/register');
       },
       ...Vuex.mapActions({
-        handleLogin:'login/handleLogin'
+        handleLogin: 'login/handleLogin'
       })
     }
   }
@@ -72,7 +73,7 @@
     overflow: hidden;
   }
 
-  .header > .user-img > img{
+  .header > .user-img > img {
     width: 100%;
     height: 100%;
   }

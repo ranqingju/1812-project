@@ -1,4 +1,5 @@
 <template>
+  <!--注册-->
   <div class="page register">
     <div class="return">
       <span class="iconfont" @click="handleGoTo()">&#xe631;</span>
@@ -34,14 +35,14 @@
 <script>
   export default {
     name: "register",
-    data(){
+    data() {
       return {
         /*手机号*/
-        phone_register:'',
+        phone_register: '',
         /*验证码*/
-        vcCode:'',
+        vcCode: '',
         /*设置密码*/
-        pwd_register:''
+        pwd_register: ''
       }
     },
     methods: {
@@ -58,6 +59,7 @@
     width: 100%;
     height: 100%;
     background: rgba(243, 242, 240, 1);
+    font-family: "微软雅黑", "宋体", "arial", "Hiragino Sans GB", "Microsoft Yahei", "Tahoma", "Helvetica", "STHeiti";
   }
 
   input, button {

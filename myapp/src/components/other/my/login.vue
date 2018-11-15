@@ -1,4 +1,5 @@
 <template>
+  <!--登录-->
   <div class="page login">
     <header-com></header-com>
     <footer-com></footer-com>
