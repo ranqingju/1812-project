@@ -1,4 +1,4 @@
-import Vue from 'vue'
+﻿import Vue from 'vue'
 import Router from 'vue-router'
 import Main from '@/components/main'
 /*首页*/
@@ -11,6 +11,8 @@ import Designer from '@/components/main/designer'
 import My from '@/components/main/my'
 /*登录*/
 import Login from '@/components/other/my/login'
+/*注册*/
+import Register from '@/components/other/my/register'
 
 import houseCase from '@/components/other/home/house/houseCase';
 import houseCaseList from '@/components/other/home/house/houseCaseList';
@@ -19,6 +21,8 @@ import houseCaseList from '@/components/other/home/house/houseCaseList';
 import Discuss from '@/components/other/home/discuss/discuss' 
 import Discussdetails from '@/components/other/home/discuss/discussdetails'
 
+/*电脑做案列*/
+import Case from '@/components/other/home/case/case'
 
 Vue.use(Router);
 
@@ -60,12 +64,17 @@ export default new Router({
       component: Login
     },
     {
+      path: '/register',
+      name: 'register',
+      component: Register
+    },
+    {
       path: '/house/houseCase',
       name: 'houseCase',
       component: houseCase
     },
     {
-      path:'/house/houseCaseList',
+      path:'/home/house/houseCaseList',
       name:'houseCaseList',
       component:houseCaseList
     },
@@ -78,7 +87,11 @@ export default new Router({
       path:'/discuss/discussdetails',
       name:'discussdetails',
       component:Discussdetails
-
+    },
+    {
+      path:'/case/case',
+      name:'case',
+      component:Case
     }
   ]
 })
