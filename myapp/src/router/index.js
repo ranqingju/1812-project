@@ -24,6 +24,7 @@ import houseCollect from '@/components/other/home/house/houseCollect';
 import Discuss from '@/components/other/home/discuss/discuss'
 import Discussdetails from '@/components/other/home/discuss/discussdetails'
 
+
 /*话题收藏*/
 import Topic_col from '@/components/other/my/topic_col'
 
@@ -45,6 +46,14 @@ import Answer from '@/components/other/home/problem/answer'
 
 /*电脑做案列*/
 import Case from '@/components/other/home/case/case'
+
+
+/* 视频与直播 */
+import VideoLive from '@/components/other/home/video/videolive' 
+
+/* 免费试用 */
+import Activity from '@/components/other/home/freetrial/activity' 
+import Report from '@/components/other/home/freetrial/report' 
 
 
 Vue.use(Router);
@@ -156,5 +165,20 @@ export default new Router({
       redirect: '/home'
     },
     
+		{
+			path:'/video/videolive',
+			name:'videolive',
+			component:VideoLive
+		},
+		{
+			path:'/freetrial/activity',
+			name:'activity',
+			component:Activity
+		},
+		{
+			path:'/freetrial/report',
+			name:'report',
+			component:Report
+		}
   ]
 })
