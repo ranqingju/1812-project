@@ -4,6 +4,8 @@ import HouseCase from './HouseCase';
 
 import Login from './login';
 import Discuss from './discuss';
+import Case from './case';
+
 
 
 Vue.use(Vuex);
@@ -25,6 +27,7 @@ const store = new Vuex.Store({
     HouseCase,
     Login,
     Discuss,
+    Case
   }
 });
 

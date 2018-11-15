@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <!--注册-->
   <div class="page register">
     <div class="return">

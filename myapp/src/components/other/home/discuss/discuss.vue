@@ -1,7 +1,7 @@
 <template>
   <div class="discuss">
       <div class="header">
-          <i><</i>
+          <i class="iconfont">&#xe628;</i>
           <p>话题讨论</p>
           <span></span>
       </div>
@@ -77,9 +77,10 @@ import Vuex from 'vuex';
     display: flex;
     justify-content: space-between;
 }
- .header>i{
-    width: .24rem;
-    height: .43rem;
+ .header>.iconfont{
+    font-size: .43rem;
+    color: #313131;
+    
 }
 .header>p{
     font-size: .34rem;

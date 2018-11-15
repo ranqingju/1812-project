@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="header">
     <div class="user-img">
       <img src="static/login/img_login.jpg"/>
@@ -21,7 +21,6 @@
 
 <script>
   import Vuex from 'vuex'
-
   export default {
     data() {
       return {

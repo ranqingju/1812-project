@@ -41,6 +41,10 @@ import Problem from '@/components/other/home/problem/problem'
 import Answer from '@/components/other/home/problem/answer'
 
 
+/*电脑做案列*/
+import Case from '@/components/other/home/case/case'
+
+
 Vue.use(Router);
 
 export default new Router({
@@ -136,8 +140,14 @@ export default new Router({
       component: Answer
     },
     {
+      path:'/case/case',
+      name:'case',
+      component:Case
+    },
+    {
       path: '**',
       redirect: '/home'
-    }
+    },
+    
   ]
 })
