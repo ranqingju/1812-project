@@ -10,7 +10,7 @@
 						<img src="static/home/icon_sy_zx.png" alt="">
 						<p>装修攻略</p>
 					</li>
-					<li>
+					<li @click='handleGoToDw()'>
 						<img src="static/home/icon_sy_jz.png" alt="">
 						<p>居住升级</p>
 					</li>
@@ -46,13 +46,18 @@
 
 <script>
 	export default {
-		
+		methods:{
+			handleGoToDw(){
+				this.$router.push('/home/dwell/dwell');
+			}
+		}
 	}
 </script>
 
 <style scoped>
 #homeCon{
 	width: 100%;
+	background:#f3f2f0
 }
 /* 导航 */
 
