@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="header">
-			<i class="iconfont">&#xe628;</i>
+			<i class="iconfont" @click="hannnd()">&#xe628;</i>
 			<img src="../../../../../static/images/1.jpg" alt="">
 		
 		</div>
@@ -46,7 +46,12 @@ export default {
             }
         ]
      }
-   }
+   },
+	 methods:{
+		 hannnd(){
+		 	this.$router.back();
+		 }
+	 }
 };
 </script>
 

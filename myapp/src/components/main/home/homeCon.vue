@@ -49,8 +49,11 @@
 		methods:{
 			handleGoToDw(){
 				this.$router.push('/home/dwell/dwell');
-			}
+			},
+			
 		}
+			
+		
 	}
 </script>
 
