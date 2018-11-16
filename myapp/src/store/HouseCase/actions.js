@@ -5,7 +5,7 @@ export default {
 
         axios({
             method:'get',
-            url:'http://localhost:3000/info'
+            url:'/usermodule-1.0/case/getallcase'
         })
         .then((info)=>{
             commit("getInfo",info);
@@ -22,8 +22,5 @@ export default {
     },
     Init:function({commit}){
         commit("Init");
-    },
-    // handleCollectToList:function({commit},index){
-    //     commit('handleCollectToList',index);
-    // }
+    } 
 }

@@ -6,9 +6,16 @@ export default {
         state.Info = info.data;
     },
     // 储存当前下标 和 当前整屋案例信息
-    handleToList:function(state,index){
-        state.Index = index;
-        state.houseList = state.Info[index];
+    handleToList:function(state,id){
+        state.Id = id;
+        axios({
+            method:'get',
+            url:'/usermodule-1.0/casedetail/getallcasedetail?casedetailid='+id
+        })
+        .then((data)=>{
+            state.houseList = data.data;
+            console.log(data.data)
+        })
     },
     // 收藏案例
     handleCollect:function(state){
