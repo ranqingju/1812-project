@@ -4,17 +4,20 @@
 			<img src="static/images/logo.png" alt="">
 		</div>
 		<div class="logo_r">
-			<span class="iconfont">&#xe606;</span>
-			<span class="iconfont">&#xe652;</span>
+			<span class="iconfont" @click="handleGoToSee()">&#xe606;</span>
+			<span class="iconfont" @click="handleGoToCas()">&#xe652;</span>
 		</div>
 	</div>
 </template>
 
 <script>
 	export default {
-		data() {
-			return {
-
+		methods: {
+			handleGoToCas() {
+				this.$router.push('/case/case')
+			},
+			handleGoToSee() {
+				this.$router.push('/seek')
 			}
 		}
 	}

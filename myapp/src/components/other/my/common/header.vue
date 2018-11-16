@@ -1,17 +1,25 @@
 <template>
   <div id="header">
     <span class="iconfont" @click="handleGoTo()">&#xe631;</span>
-    <span>话题讨论</span>
+    <span>{{headName}}</span>
     <span></span>
   </div>
 </template>
 
 <script>
   export default {
+    data(){
+      return {
+        headName:''
+      }
+    },
     methods:{
       handleGoTo(){
         this.$router.back();
       }
+    },
+    created(){
+      this.headName = this.$route.query.headName;
     }
   }
 </script>

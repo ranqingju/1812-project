@@ -1,7 +1,7 @@
 <template>
 	<div class="previous">
 		<div class="header">
-			<i class="iconfont">&#xe628;</i>
+			<i class="iconfont" @click="hannd()">&#xe628;</i>
 			<img src="../../../../../static/designer/bg1.jpg" alt="">
 			<p>前期准备</p>
 		</div>
@@ -49,7 +49,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+	methods:{
+		hannd(){
+			this.$router.back();
+		}
+	}
+};
 </script>
 
 <style scoped>
@@ -76,7 +82,7 @@ export default {};
 	}
 	.pp{
 		display: block;
-		font-size:50px ;
+		font-size:16px ;
 		width: 6.9rem;
 		/* display: flex;
 		justify-content: center; */
@@ -84,7 +90,7 @@ export default {};
 		padding-top:57px ;
 	}
 	.ppp{
-		font-size: 33px;
+		font-size: 20px;
 		font-weight: 900;
 		padding-left: 30px;
 		padding-top: 42px;

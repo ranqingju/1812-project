@@ -1,13 +1,13 @@
 <template>
 	<div id="activity">
 		<div class="act_header">
-			<span class="iconfont">&#xe631;</span>
+			<span class="iconfont @click='handleReturn()">&#xe631;</span>
 			<h2>试用</h2>
 		</div>
 		<div class="act_content">
 			<div class="act_cont_title">
 				<p class="action">活动</p>
-				<p>报告</p>
+				<p @click='handleGoReport()'>报告</p>
 			</div>
 			<div class="act_cont_flex">
 				<div class="act_cont_details">
@@ -65,10 +65,13 @@
 
 <script>
 	export default {
-		data() {
-			return {
-				
-			};
+		methods:{
+			handleReturn(){
+				this.$router.back();
+			},
+			handleGoReport(){
+				this.$router.push('./report');
+			}
 		}
 	}
 </script>

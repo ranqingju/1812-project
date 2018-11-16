@@ -9,31 +9,31 @@
 				<span class="iconfont">&#xe625;</span>
 				<p>我的整屋案例</p>
 			</div>
-			<div>
+			<div @click="goToTopicCol('话题收藏')">
 				<span class="iconfont">&#xe63d;</span>
-				<p>我的话题讨论</p>
+				<p>话题收藏</p>
 			</div>
 		</div>
 		<div>
 			<div>
-				<span class="iconfont">&#xe633;</span>
+				<span class="iconfont">&#xe623;</span>
 				<p>我的收藏</p>
 			</div>
-			<div>
+			<div @click="goToTrial('我的试用')">
 				<span class="iconfont">&#xe608;</span>
 				<p>我的试用</p>
 			</div>
-			<div>
+			<div @click="goToArticle('我的文章')">
 				<span class="iconfont">&#xe66a;</span>
 				<p>我的文章</p>
 			</div>
 		</div>
 		<div>
-			<div>
+			<div @click="goToHouseArea('我的小区')">
 				<span class="iconfont">&#xe644;</span>
 				<p>我的小区</p>
 			</div>
-			<div>
+			<div @click="goToSetUp('设置')">
 				<span class="iconfont">&#xe6ee;</span>
 				<p>设置</p>
 			</div>
@@ -47,7 +47,48 @@
 
 <script>
 	export default {
-
+    methods:{
+      goToTopicCol(val){
+        this.$router.push({
+          path:'/my/topic_col',
+          query:{
+            headName:val
+          }
+        });
+      },
+      goToHouseArea(val){
+        this.$router.push({
+          path:'/my/house_area',
+          query:{
+            headName:val
+          }
+        });
+      },
+      goToSetUp(val){
+        this.$router.push({
+          path:'/my/setUp',
+          query:{
+            headName:val
+          }
+        });
+      },
+      goToTrial(val){
+        this.$router.push({
+          path:'/my/trial',
+          query:{
+            headName:val
+          }
+        });
+      },
+      goToArticle(val){
+        this.$router.push({
+          path:'/my/article',
+          query:{
+            headName:val
+          }
+        });
+      }
+    }
 	}
 </script>
 

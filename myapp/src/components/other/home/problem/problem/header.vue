@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <span class="iconfont">&#xe631;</span>
+    <span class="iconfont" @click="handleGoto()">&#xe631;</span>
     <div class="title">
       <h2>这些设计方案 总有一款满足你</h2>
       <p>无论你对家装问题有多挑剔在，这些设计方案总有一款满足你。关键字：设计 风格 配色</p>
@@ -9,7 +9,13 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    methods:{
+      handleGoto(){
+        this.$router.back();
+      }
+    }
+  }
 </script>
 
 <style scoped>

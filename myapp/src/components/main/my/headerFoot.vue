@@ -8,7 +8,7 @@
 			<span class="iconfont">&#xe61c;</span>
 			<p>获取积分</p>
 		</div>
-		<div>
+		<div @click="handleGoToCredits()">
 			<span class="iconfont">&#xe604;</span>
 			<p>兑换积分</p>
 		</div>
@@ -20,7 +20,10 @@
 		methods: {
 			handleGoToWe() {
 				this.$router.push('/my/weal');
-			}
+			},
+      handleGoToCredits(){
+			  this.$router.push('/credits');
+      }
 		}
 	}
 </script>

@@ -10,10 +10,10 @@
 
 		<div class="debate">
 			<h3>大家都在讨论</h3>
-			<i class="iconfont">查看更多 &#xe665;</i>
+			<i class="iconfont" @click="handleGoToPr()">查看更多 &#xe665;</i>
 		</div>
-		<div class="debate-n">
-			<div class="debate-r">
+		<div class="debate-n" @click="handleGoToPr()">
+			<div class="debate-r" >
 				<img src="../../../../static/images/chh.png" alt="">
 				<div class="debate_bot">
 					<p>687人参与讨论</p>
@@ -34,7 +34,7 @@
 		</div>
 
 		<!-- 话题讨论 -->
-		<div class="topic1">
+		<div class="topic1" @click="handleGoToDis()">
 			<h3>话题讨论</h3>
 			<p>空调+净化器VS净界空调,你会怎么选？</p>
 			<div class="take">
@@ -61,7 +61,15 @@
 
 <script>
 	export default {
-
+		methods:{
+			handleGoToDis(){
+				this.$router.push('/home/problem/answer')
+			},
+			
+			handleGoToPr(){
+				this.$router.push('/home/problem')
+			},
+		}
 	}
 </script>
 

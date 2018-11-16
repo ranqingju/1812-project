@@ -72,12 +72,12 @@ export default {
     width: 100%;
     height: 3.6rem;
     position: relative;
-    background: ;
+    background: pink;
 }
 .qingdan{
     width: 7.01rem;
     height: 5.08rem;
-    background: ;
+    background: yellow;
     padding: .46rem 1rem .42rem .99rem;
     position: absolute;
     left: .25rem;

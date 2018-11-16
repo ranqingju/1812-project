@@ -60,6 +60,12 @@
     background: #F3F2F0;
   }
 
+  input, button {
+    /*取消表单控件样式*/
+    outline: none;
+    -webkit-appearance: none;
+  }
+
   .setUp > .setUp_bot {
     height: 100%;
   }

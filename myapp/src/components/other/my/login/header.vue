@@ -6,11 +6,11 @@
     <div class="form">
       <p>
         <span class="iconfont">&#xe649;</span>
-        <input type="text" v-model="user_login" placeholder="用户名">
+        <input type="text" v-model="user_login" placeholder="用户名" @input="changeInput({val:user_login,index:0})">
       </p>
       <p>
         <span class="iconfont">&#xe619;</span>
-        <input :type="pwd_txt" v-model="pwd_login" placeholder="密码">
+        <input :type="pwd_txt" v-model="pwd_login" placeholder="密码" @input="changeInput({val:pwd_login,index:1})">
         <span class="iconfont" v-html="pwd_show_hide" @click="handleChangePwd()"></span>
       </p>
       <button @click="handleLogin()">登录</button>
@@ -26,8 +26,8 @@
       return {
         pwd_show_hide: '&#xe609;',
         pwd_txt: 'password',
-        user_login: "",
-        pwd_login: ''
+        user_login:'',
+        pwd_login:''
       }
     },
     methods: {
@@ -46,7 +46,10 @@
         this.$router.push('/my/register');
       },
       ...Vuex.mapActions({
-        handleLogin: 'login/handleLogin'
+        /*更新表单值*/
+        changeInput:'Login/changeInput',
+        /*点击登录*/
+        handleLogin: 'Login/handleLogin'
       })
     }
   }
@@ -63,6 +66,7 @@
     -webkit-appearance: none;
   }
 
+  /*用户头像框*/
   .header > .user-img {
     width: 1.8rem;
     height: 1.8rem;
@@ -72,6 +76,7 @@
     overflow: hidden;
   }
 
+  /*用户头像*/
   .header > .user-img > img {
     width: 100%;
     height: 100%;
@@ -108,12 +113,14 @@
     color: #000;
   }
 
+  /*按钮*/
   .header > .form > button {
     width: 4.36rem;
     height: .6rem;
     font-size: 36px;
   }
 
+  /*登录*/
   .header > .form > button:nth-of-type(1) {
     border: 0;
     border-radius: 10px;
@@ -121,6 +128,7 @@
     margin-top: 0.56rem;
   }
 
+  /*注册*/
   .header > .form > button:nth-of-type(2) {
     border: 0;
     background: transparent;
