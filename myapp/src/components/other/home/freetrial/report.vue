@@ -1,12 +1,12 @@
 <template>
 	<div id="report">
 		<div class="header">
-			<span class="iconfont">&#xe631;</span>
+			<span class="iconfont @click='handleReturn()">&#xe631;</span>
 			<h2>试用</h2>
 		</div>
 		<div class="content">
 			<div class="cont_title">
-				<p>活动</p>
+				<p @click='handleGoReport()'>活动</p>
 				<p class="action">报告</p>
 			</div>
 			<div class="cont_flex">
@@ -44,10 +44,13 @@
 
 <script>
 	export default {
-		data() {
-			return {
-				
-			};
+		methods:{
+			handleReturn(){
+				this.$router.back();
+			},
+			handleGoReport(){
+				this.$router.push('./activity');
+			}
 		}
 	}
 </script>
