@@ -2,11 +2,12 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import HouseCase from './HouseCase';
-
+import Register from './register';
 import Login from './login';
 import Discuss from './discuss';
 import Case from './case';
-
+import Magazine from './magazine'
+import Designer from './designer'
 
 
 Vue.use(Vuex);
@@ -26,9 +27,12 @@ const store = new Vuex.Store({
   getters,
   modules: {
     HouseCase,
+    Register,
     Login,
     Discuss,
-    Case
+    Case,
+    Magazine,
+    Designer
   }
 });
 

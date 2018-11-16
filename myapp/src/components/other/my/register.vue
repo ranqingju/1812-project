@@ -11,20 +11,23 @@
       <div class="ipt">
         <label for="phone">手机号</label>
         <p>
-          <input type="text" id="phone" placeholder="请输入您的手机号码" v-model="phone_register">
-          <a href="javascript:;">获取验证码</a>
+          <input type="text" id="phone" placeholder="请输入您的手机号码" v-model="phone_reg"
+                 @input="changeInput({val:phone_reg,index:0})">
+          <a href="javascript:;" @click="handleGetCode()">获取验证码</a>
         </p>
       </div>
       <div class="ipt">
         <label for="verification_Code">验证码</label>
         <p>
-          <input type="text" id="verification_Code" placeholder="请输入您的验证码" v-model="vcCode">
+          <input type="text" id="verification_Code" placeholder="请输入您的验证码" v-model="vcCode"
+                 @input="changeInput({val:vcCode,index:1})">
         </p>
       </div>
       <div class="ipt">
         <label for="set_pwd">设置密码</label>
         <p>
-          <input type="text" id="set_pwd" placeholder="请输入6~18位数字加字母组合" v-model="pwd_register">
+          <input type="text" id="set_pwd" placeholder="请输入6~18位数字加字母组合" v-model="pwd_reg"
+                 @input="changeInput({val:pwd_reg,index:2})">
         </p>
       </div>
       <button @click="handleRegister()">注册</button>
@@ -33,23 +36,33 @@
 </template>
 
 <script>
+  import Vuex from 'vuex'
+
   export default {
     name: "register",
     data() {
       return {
         /*手机号*/
-        phone_register: '',
+        phone_reg: '',
         /*验证码*/
         vcCode: '',
         /*设置密码*/
-        pwd_register: ''
+        pwd_reg: ''
       }
     },
     methods: {
       /*返回上一页*/
       handleGoTo() {
         this.$router.back();
-      }
+      },
+      ...Vuex.mapActions({
+        /*更新表单*/
+        changeInput: 'Register/changeInput',
+        /*获取验证码*/
+        handleGetCode: 'Register/handleGetCode',
+        /*注册*/
+        handleRegister: 'Register/handleRegister'
+      })
     }
   }
 </script>

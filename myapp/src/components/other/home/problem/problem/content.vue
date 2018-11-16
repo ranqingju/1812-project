@@ -34,6 +34,7 @@
     font-family: "微软雅黑", "宋体", "arial", "Hiragino Sans GB", "Microsoft Yahei", "Tahoma", "Helvetica", "STHeiti";
   }
 
+  /*列表*/
   .content > .proList {
     height: 2.59rem;
     padding: 0.39rem 0;
@@ -41,6 +42,7 @@
     display: flex;
   }
 
+  /*列表大图*/
   .content > .proList > img {
     width: 2.4rem;
     margin-right: 0.24rem;
@@ -53,11 +55,13 @@
     justify-content: space-between;
   }
 
+  /*列表标题*/
   .content > .proList > .list_r > h3 {
     font-size: 28px;
     color: #242526;
   }
 
+  /*列表备注*/
   .content > .proList > .list_r > p {
     font-size: 24px;
     color: #60605F;
@@ -75,6 +79,7 @@
     align-items: center;
   }
 
+  /*列表头像外边框*/
   .content > .proList > .list_r > .list_b > em:nth-of-type(1) > span:nth-of-type(1) {
     width: 0.5rem;
     height: 0.5rem;
@@ -83,6 +88,7 @@
     margin-right: 0.23rem;
   }
 
+  /*列表头像图片*/
   .content > .proList > .list_r > .list_b > em:nth-of-type(1) > span:nth-of-type(1) > img {
     width: 100%;
   }
@@ -97,6 +103,7 @@
     color: #F98509;
   }
 
+  /*立即查看按钮*/
   .content > .proList > .list_r > .list_b > em:nth-of-type(2) i:nth-of-type(2) {
     margin-left: 0.1rem;
   }
