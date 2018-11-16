@@ -1,7 +1,7 @@
 <template>
   <div class="discuss">
       <div class="header">
-          <i class="iconfont">&#xe628;</i>
+          <i class="iconfont" @click="handleBack()">&#xe628;</i>
           <p>话题讨论</p>
           <span></span>
       </div>
@@ -13,7 +13,7 @@
           </ul>
       </div>
       <div class="center">
-          <div class="content" v-for="(val,index) in info" :key="index" >
+          <div class="content" v-for="(val,index) in info" :key="index" @click="handleGo()">
               <span>{{val.title}}</span>
               <div class="message">
                   <p>{{val.message}}</p>
@@ -57,9 +57,15 @@ import Vuex from 'vuex';
         handleClick(){
             
         },
-        // handleGo:function(){
-        //     this.router.push('/discuss/discussdetails')
+        // handleGO(){
+        //     this.$router.push("/discuss/details")
         // }
+        handleGo(){
+            this.$router.push('/discuss/discussdetails')
+        },
+        handleBack(){
+            this.$router.push('/home')
+        }
     }
   }
 </script>
@@ -71,7 +77,7 @@ import Vuex from 'vuex';
 .header{
     width: 100%;
     height: .88rem;
-    margin-top: .4rem;
+    margin-top: ;
     background: #fff;
     line-height: .88rem;
     display: flex;
@@ -91,12 +97,14 @@ import Vuex from 'vuex';
     height: .7rem;
     background: #fff;
     border-top: 2px solid #D0D0CE;
+    
 }
 .navs>ul{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
+    
 }
 .navs>ul>li{
     display: block;
