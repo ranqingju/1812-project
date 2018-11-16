@@ -2,11 +2,11 @@
 	<div id="homeCon">
 		<div class="nav">
 				<ul>
-					<li>
+					<li @click="handleGoToCa()">
 						<img src="static/home/icon_sy_zw.png" alt="">
 						<p>整屋案例</p>
 					</li>
-					<li>
+					<li @click="handleGoToFin()">
 						<img src="static/home/icon_sy_zx.png" alt="">
 						<p>装修攻略</p>
 					</li>
@@ -14,21 +14,21 @@
 						<img src="static/home/icon_sy_jz.png" alt="">
 						<p>居住升级</p>
 					</li>
-					<li>
+					<li @click="handleGoToAc()">
 						<img src="static/home/icon_sy-mf.png" alt="">
 						<p>免费试用</p>
 					</li>
 				</ul>
 		</div>
 		<div class="topic">
-			<div class="topic_l">
+			<div class="topic_l" @click="handleGoToDi()">
 				<h2>话题</h2>
 				<p>大家都在讨论</p>
 				<i></i>
 				<span></span>
 				<em></em>
 			</div>
-			<div class="topic_r">
+			<div class="topic_r" @click="handleGoToVi()">
 				<h3>视频</h3>
 				<p>分享体验</p>
 				<img src="static/images/shipin1.png" alt="">
@@ -49,6 +49,21 @@
 		methods:{
 			handleGoToDw(){
 				this.$router.push('/home/dwell/dwell');
+			},
+			handleGoToFin(){
+				this.$router.push('/finish')
+			},
+			handleGoToAc(){
+				this.$router.push('/freetrial/activity')
+			},
+			handleGoToCa(){
+				this.$router.push('/home/house/houseCase')
+			},
+			handleGoToDi(){
+				this.$router.push('/discuss/discuss')
+			},
+			handleGoToVi(){
+				this.$router.push('/video/videolive')
 			}
 		}
 	}

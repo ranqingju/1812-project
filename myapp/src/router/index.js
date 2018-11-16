@@ -22,10 +22,12 @@ import newAddCase from '@/components/other/home/house/add/newAddCase';
 import drafts from '@/components/other/home/house/add/drafts';  
 
 /*话题讨论*/
-import Discuss from '@/components/other/home/discuss/discuss';
-import Discussdetails from '@/components/other/home/discuss/discussdetails';
-import Dwell from '@/components/other/home/dwell/dwell';
-import Weal from '@/components/other/my/weal';
+import Discuss from '@/components/other/home/discuss/discuss'
+import Discussdetails from '@/components/other/home/discuss/discussdetails'
+// 二级页面 居住升级
+import Dwell from '@/components/other/home/dwell/dwell'
+// 二级页面 会员福利
+import Weal from '@/components/other/my/weal'
 
 /*电脑做案列*/
 import Case from '@/components/other/home/case/case';
