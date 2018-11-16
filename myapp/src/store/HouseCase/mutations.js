@@ -14,7 +14,7 @@ export default {
         })
         .then((data)=>{
             state.houseList = data.data;
-            console.log(data.data)
+            console.log(data)
         })
     },
     // 收藏案例
