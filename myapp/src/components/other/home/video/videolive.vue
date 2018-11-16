@@ -1,7 +1,7 @@
 <template>
 	<div id="video">
 		<div class="video_name">
-			<sapn class="iconfont">&#xe631;</sapn>
+			<span class="iconfont @click='handleReturn()">&#xe631;</span>
 			<h2>视频与直播</h2>
 		</div>
 		<div class="videos">
@@ -38,7 +38,11 @@
 
 <script>
 	export default {
-		
+		methods:{
+			handleReturn(){
+				this.$router.back();
+			}
+		}
 	}
 </script>
 
