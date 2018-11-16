@@ -1,7 +1,7 @@
 <template>
 	<div class="zhuang">
 		<div id="zhuangxiu">
-			<p class="iconfont">&#xe628;</p><h2>装修攻略</h2>
+			<p class="iconfont" @click="hand()">&#xe628;</p><h2>装修攻略</h2>
 			 
 		</div>
 		<div id="banner">
@@ -11,7 +11,7 @@
 		<div id="zhuangqian">
 			<p>装修前</p>
 			<div id="img">
-			<img src="../../../../../static/images/2_03.jpg" alt="">
+			<img src="../../../../../static/images/2_03.jpg" alt=""  @click="handa()">
 			<img src="../../../../../static/images/3_03.jpg" alt="">
 			<img src="../../../../../static/images/4_03.jpg" alt="">
 			
@@ -45,65 +45,68 @@
 </template>
 
 <script>
-export default {};
+export default {
+    methods: {
+        hand() {
+            this.$router.back();
+        },
+        handa() {
+            this.$router.push('/previous');
+        }
+    }
+};
 </script>
 
 <style scoped>
-	.zhuang{
-		background: 
-#F3F2F0;
-		height: 100%;
-	}
-	#zhuangxiu{
-		width: 100%;
-		height: 0.5rem;
-		background: pink;
-		display: flex;
-		
-		
-	}
-	#zhuangxiu > h2{
-		font-size: 34px;
-		margin: 0 auto;
-		line-height: 44px;
-		
-	}
-	#zhuangxiu > p{
-		font-size: 40px;
-		position: relative;
-		left: 10px;
-		color:#666666 ;
-	}
-	/* banner */
-	#banner{
-		display: flex;
-		justify-content: center;
-		
-	}
-	#banner> img{
-		width: 7.02rem;
-		height:3.14rem;
-		padding-top: 30px;
-		
-	}
+.zhuang {
+    background: #f3f2f0;
+    height: 100%;
+}
+#zhuangxiu {
+    width: 100%;
+    height: 0.5rem;
+    
+    display: flex;
+}
+#zhuangxiu > h2 {
+    font-size: 34px;
+    margin: 15px auto;
+    line-height: 44px;
 	
-	#zhuangqian{
-		width: 100%;
-		height: 3.26rem;
-		
-		
-	}
-	#zhuangqian> p{
-		font-size: 34px;
-		padding-top: 69px;
-		 padding-left: 24px;
-		 display: block;
-		 font-weight: 900;
-		 color: #000000;
-	}
-	#zhuangqian>#img{
-		padding-top:42px ;
-		display: flex;
-		justify-content: space-around;
-	}
+}
+#zhuangxiu > p {
+    font-size: 40px;
+    position: relative;
+    left: 10px;
+    color: #666666;
+	
+}
+/* banner */
+#banner {
+    display: flex;
+    justify-content: center;
+}
+#banner > img {
+    width: 7.02rem;
+    height: 3.14rem;
+    padding-top: 30px;
+}
+
+#zhuangqian {
+    width: 100%;
+    height: 3.26rem;
+}
+#zhuangqian > p {
+    font-size: 34px;
+    padding-top: 69px;
+    padding-left: 24px;
+    display: block;
+    font-weight: 900;
+    color: #000000;
+}
+#zhuangqian > #img {
+    padding-top: 42px;
+    display: flex;
+    justify-content: space-around;
+}
 </style>
