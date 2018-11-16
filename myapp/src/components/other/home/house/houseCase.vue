@@ -2,7 +2,7 @@
     <div id="house-case">
 
         <div class="house-top">
-            <span class="iconfont back">&#xe631;</span>
+            <span class="iconfont back" @click="handleBack()">&#xe631;</span>
             <h2>整屋案例</h2>
             <span class="iconfont search">&#xe606;</span>
         </div>
@@ -14,15 +14,15 @@
             <div class="house-cont" v-for="(val,index) in Info" :key="index">
                 <div class="cont-top">
                     <div>
-                        <img :src="val.simg" @click="handleToList(index),handleGo()">
-                        <p>{{val.tit}}</p>
+                        <img :src=" 'http://ceshi.qfjava.cn/' + val.headportrait" @click="handleToList(val.userid),handleGo()">
+                        <p>{{val.username}}</p>
                     </div>
 
-                    <p>{{val.mes}}</p>
+                    <p>{{val.theme}}</p>
                 </div>
                 
                 <div class="cont-bottom">
-                    <img :src="val.bimg" @click="handleToList(index),handleGo()">
+                    <img :src=" 'http://ceshi.qfjava.cn/' + val.themeimg" @click="handleToList(val.userid),handleGo()">
                 </div>
             </div>
 
@@ -55,6 +55,9 @@
             }),
             handleGo:function(){
                 this.$router.push('/home/house/houseCaseList');
+            },
+            handleBack:function(){
+                this.$router.push('/home');
             }
         }
     }
@@ -124,7 +127,7 @@
     }
     #house-case>.house-center>.house-cont>.cont-bottom>img{
          width:100%;
-         height:100%;
+         height:3.38rem;
          border-radius:.1rem;
     }
 

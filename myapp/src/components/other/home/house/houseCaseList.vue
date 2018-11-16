@@ -7,11 +7,11 @@
         </header>
         
         <section>
-            <img :src="houseList.bimg">
+            <!-- <img :src="houseList.bimg"> -->
             <div class="main">
                 <div class="user">
-                    <img :src="houseList.simg">
-                    <p>{{houseList.tit}}</p>
+                    <!-- <img :src="houseList.simg"> -->
+                    <p>{{houseList.caseauthor}}</p>
                 </div>
 
                 <h2>房屋信息</h2>  
@@ -22,8 +22,9 @@
                 </div>
 
                 <h2>前言</h2>
-                <p>1按时打算打算的啊实打实大师大师的</p>
-                <p>按时打算打算打算打算打算打打</p>
+                <p>{{houseList.title}}</p>
+                <p>{{houseList.content}}</p>
+                
             </div>
         </section>
 
