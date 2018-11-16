@@ -23,7 +23,9 @@ import houseCollect from '@/components/other/home/house/houseCollect';
 /*话题讨论*/
 import Discuss from '@/components/other/home/discuss/discuss'
 import Discussdetails from '@/components/other/home/discuss/discussdetails'
+// 二级页面 居住升级
 import Dwell from '@/components/other/home/dwell/dwell'
+// 二级页面 会员福利
 import Weal from '@/components/other/my/weal'
 
 /*话题收藏*/
