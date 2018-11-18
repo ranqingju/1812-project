@@ -63,7 +63,7 @@
 <script>
 import Vuex from 'vuex';
 export default {
-    name:'discussdetails'
+    	name:'discussdetails'
 }
 </script>
 
