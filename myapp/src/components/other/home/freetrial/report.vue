@@ -1,7 +1,7 @@
 <template>
 	<div id="report">
 		<div class="header">
-			<span class="iconfont @click='handleReturn()">&#xe631;</span>
+			<span class="iconfont" @click='handleReturn()'>&#xe631;</span>
 			<h2>试用</h2>
 		</div>
 		<div class="content">
@@ -10,7 +10,16 @@
 				<p class="action">报告</p>
 			</div>
 			<div class="cont_flex">
-				<div>
+				<div v-for="(item,index) in trialreportList">
+					<div>
+						<img :src="'http://ceshi.qfjava.cn/'+item.image">
+					</div>		
+					<p>{{item.title}}</p>
+					<p>价值: <span>{{item.worth}}</span>元 名额/: <span>{{item.quota}}</span> 申请: <span>{{item.apply}}</span></p>
+					<p>立即申请</p>
+					<p>距申请结束<span>{{item.remainingtime}}</span>天</p>
+				</div>
+				<!-- <div>
 					<div>
 						<img src="../../../../../static/designer/bg1.jpg">
 					</div>		
@@ -27,30 +36,33 @@
 					<p>价值: <span>2499</span>元 名额/: <span>2</span> 申请: <span>2</span></p>
 					<p>立即申请</p>
 					<p>距申请结束<span>13</span>天</p>
-				</div>
-				<div>
-					<div>
-						<img src="../../../../../static/designer/bg1.jpg">
-					</div>		
-					<p>卓力增压智能挂烫机试用</p>
-					<p>价值: <span>2499</span>元 名额/: <span>2</span> 申请: <span>2</span></p>
-					<p>立即申请</p>
-					<p>距申请结束<span>13</span>天</p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+	import Vuex from 'vuex'
 	export default {
+		computed:{
+			...Vuex.mapState({
+				trialreportList:state=>state.Freetrial.trialreportList
+			})
+		},
 		methods:{
 			handleReturn(){
-				this.$router.back();
+				this.$router.push("/home");
 			},
 			handleGoReport(){
 				this.$router.push('./activity');
-			}
+			},
+			...Vuex.mapActions({
+				gettrialreport:'Freetrial/gettrialreport'
+			})
+		},
+		created(){
+			this.gettrialreport();
 		}
 	}
 </script>

@@ -96,6 +96,7 @@ export default {
     font-size: 40px;
     border: none;
     color: #bdbdbd;
+		outline:none
 }
 .fd > button {
     width: 0.8rem;
