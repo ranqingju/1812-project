@@ -8,6 +8,7 @@ import Discuss from './discuss';
 import Case from './case';
 import Magazine from './magazine'
 import Designer from './designer'
+import Dwell from './dwell'
 
 
 Vue.use(Vuex);
@@ -32,7 +33,8 @@ const store = new Vuex.Store({
     Discuss,
     Case,
     Magazine,
-    Designer
+    Designer,
+		Dwell
   }
 });
 

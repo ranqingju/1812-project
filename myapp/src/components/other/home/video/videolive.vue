@@ -38,7 +38,7 @@
 
 <script>
 	export default {
-		methods:{
+		methods:{      
 			handleReturn(){
 				this.$router.back();
 			}

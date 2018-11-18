@@ -34,17 +34,46 @@
 				<img src="static/images/shipin1.png" alt="">
 			</div>			
 		</div>
-		<div class="family">
+		
+		<!-- <div class="family">
 			
 			<p>DIY</p>
 			<span>我的</span>
 			<p>理想家</p>
 			
+		</div> -->
+		
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide family">
+				<p>DIY</p>
+				<span>我的</span>
+				<p>理想家</p>
+			</div>
+			<div class="swiper-slide family">
+				<p>DIY</p>
+				<span>我的</span>
+				<p>理想家</p>
+			</div>
+			<div class="swiper-slide family">
+				<p>DIY</p>
+				<span>我的</span>
+				<p>理想家</p>
+			</div>
+			
 		</div>
+ 
+	</div>
+		
+		
 	</div>
 </template>
 
 <script>
+
+import '../../../../node_modules/swiper/dist/css/swiper.css';
+import 	Swiper from 'swiper'; 
+
 export default {
     methods: {
         handleGoToDw() {
@@ -65,7 +94,18 @@ export default {
         handleGoToVi() {
             this.$router.push('/video/videolive');
         }
-    }
+    },
+	mounted(){
+		new Swiper ('.swiper-container', {
+			
+			loop: true, // 循环模式选项
+			autoplay: {
+				delay: 3000,
+				stopOnLastSlide: false,
+				disableOnInteraction: true,
+			}
+		})
+	}
 };
 </script>
 
@@ -188,11 +228,12 @@ export default {
 }
 
 .family {
-    width: 7rem;
+    width:100%;
     height: 2.58rem;
     background: url(../../../../static/images/family.png) no-repeat;
-    margin-left: 0.24rem;
-    border-radius: 5%;
+   /* margin-left: 0.13rem; */
+	display: inline-block;
+    border-radius: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,5 +248,13 @@ export default {
     font-size: 24px;
     color: #efefec;
     line-height: 24px;
+}
+.swiper-container {
+    width: 100%;
+    height: 2.58rem;
+}
+.swiper-wrapper{
+	text-align: center;
+	padding-left:.25rem;
 }
 </style>
