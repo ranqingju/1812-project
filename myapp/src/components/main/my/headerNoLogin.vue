@@ -31,7 +31,7 @@
     height: 1.3rem;
     background: #e2e2e2;
     border-radius: 50%;
-    border: 10px solid #FFFFFF;
+    border: 5px solid #FFFFFF;
   }
 
   .no_login > .headImg > img{

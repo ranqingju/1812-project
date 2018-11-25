@@ -70,10 +70,10 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    font-family: '微软雅黑';
+    font-family: "微软雅黑", "宋体", "arial", "Hiragino Sans GB", "Microsoft Yahei", "Tahoma", "Helvetica", "STHeiti";
     font-size: 24px;
     font-weight: 400;
-    color: #0F0F0D;
+    color: #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,7 +82,7 @@
   /*底部文字图标*/
   #footer > ul > li > a > span:nth-child(1) {
     font-size: 52px;
-    line-height: 0.52rem;
+    line-height: 0.50rem;
     color: #949494;
   }
 

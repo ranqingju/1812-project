@@ -139,7 +139,7 @@
     flex: 1;
     height: 0.55rem;
     font-size: 30px;
-    color: #919293;
+    color: #000;
     border: 0;
     background: transparent;
   }

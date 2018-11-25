@@ -69,6 +69,7 @@
         flex-direction: column;
         height:100%;
         font-family:'宋体';
+        background: #fff;
     }
     #house-case>.house-top{
         padding: 0 0.28rem;

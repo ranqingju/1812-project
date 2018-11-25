@@ -1,7 +1,7 @@
 <template>
   <div class="content">
 
-    <div class="proList" v-for="">
+    <div class="proList" v-for="" @click="goToAnswer()">
       <img src="static/home/zj02.jpg"/>
       <div class="list_r">
         <h3>可不可以不吊顶？</h3>
@@ -25,7 +25,13 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    methods:{
+      goToAnswer(){
+        this.$router.push('/home/problem/answer');
+      }
+    }
+  }
 </script>
 
 <style scoped>

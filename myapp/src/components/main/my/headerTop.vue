@@ -9,7 +9,7 @@
 			<p>20</p>
 		</div>
 		<div>
-			<img src="../../../../static/designer/bg1.jpg">
+			<img src="static/login/img_login.jpg">
 			<h2>一枚小匠</h2>
 		</div>
 		<div>
@@ -66,14 +66,13 @@
 
 	#header_t>div>div>p {
 		color: #34343D;
-		font-size: 24px;
-		line-height: 24px;
-
+		font-size: 28px;
+		line-height: 28px;
 	}
 
 	#header_t>div>p {
-		font-size: 20px;
-		line-height: 20px;
+		font-size: 24px;
+		line-height: 24px;
 		color: #666666
 	}
 
@@ -86,7 +85,7 @@
 		width: 100%;
 		height: 100%;
 		border-radius: 50%;
-		border: 10px solid #FFFFFF;
+		border: 5px solid #FFFFFF;
 	}
 
 	#header_t>div:nth-child(2)>h2 {

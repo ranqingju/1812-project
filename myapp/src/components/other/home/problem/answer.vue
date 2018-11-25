@@ -21,5 +21,6 @@
 <style scoped>
   .answer {
     height: 100%;
+    background: rgba(255,255,255,1);
   }
 </style>

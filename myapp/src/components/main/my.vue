@@ -1,6 +1,6 @@
 <template>
   <div class="page my">
-    <component :is="headCom.nolog">
+    <component :is="headCom.log">
       <nologin-com></nologin-com>
       <headertop-com></headertop-com>
     </component>
@@ -36,6 +36,6 @@
 
 <style scoped>
   .my {
-    background: #feda44;
+    background: #feda44 url("/static/my/userHr.png") 0 0.5rem no-repeat;
   }
 </style>

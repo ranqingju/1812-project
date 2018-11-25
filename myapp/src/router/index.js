@@ -7,7 +7,8 @@ import Main from '@/components/main';
 HOME
 */
 /*首页*/
-import Home from '@/components/main/home';
+/*import Home from '@/components/main/home';*/
+const Home = ()=>import('@/components/main/home');
 
 /*整屋案例*/
 import houseCase from '@/components/other/home/house/houseCase';

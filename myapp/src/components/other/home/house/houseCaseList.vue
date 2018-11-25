@@ -5,7 +5,7 @@
             <h2>案例详情</h2>
             <span></span>
         </header>
-        
+
         <section>
             <!-- <img :src="houseList.bimg"> -->
             <div class="main">
@@ -14,7 +14,7 @@
                     <p>{{houseList.caseauthor}}</p>
                 </div>
 
-                <h2>房屋信息</h2>  
+                <h2>房屋信息</h2>
                 <div class="info">
                     <li><span class="iconfont houseicon1">&#xe674;</span>三室</li>
                     <li><span class="iconfont houseicon2">&#xea3c;</span>120平方米</li>
@@ -24,7 +24,7 @@
                 <h2>前言</h2>
                 <p>{{houseList.title}}</p>
                 <p>{{houseList.content}}</p>
-                
+
             </div>
         </section>
 
@@ -73,6 +73,7 @@
         display: flex;
         flex-direction: column;
         font-family: '宋体';
+        background: #fff;
     }
     #houseCaseList>header{
         height:0.88rem;

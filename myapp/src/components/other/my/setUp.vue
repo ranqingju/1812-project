@@ -36,7 +36,7 @@
           <span>关于我们</span>
           <span class="iconfont">&#xe665;</span>
         </p>
-        <button>退出登录</button>
+        <button @click="logout()">退出登录</button>
       </div>
     </div>
   </div>
@@ -44,11 +44,17 @@
 
 <script>
   import Header from './common/header'
+  import Vuex from 'vuex'
 
   export default {
     name: "setUp",
     components: {
       'header-com': Header
+    },
+    methods: {
+      ...Vuex.mapActions({
+        logout:'Login/logout'
+      })
     }
   }
 </script>
@@ -58,6 +64,7 @@
     height: 100%;
     overflow: hidden;
     background: #F3F2F0;
+    font-size: 50px;
   }
 
   input, button {
