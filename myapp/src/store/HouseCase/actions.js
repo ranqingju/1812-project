@@ -2,7 +2,6 @@ import axios from 'axios';
 
 export default {
     getInfo:function({commit}){
-
         axios({
             method:'get',
             url:'/usermodule-1.0/case/getallcase'
@@ -11,11 +10,8 @@ export default {
             commit("getInfo",info);
         })
     },
-    handleToList:function({commit},id){
-        commit('handleToList',id);
-    },
-    handleCollect:function({commit}){
-        commit('handleCollect');
+    handleToList:function({commit},info){
+        commit('handleToList',info);
     },
     handleCollect:function({commit}){
         commit('handleCollect');
