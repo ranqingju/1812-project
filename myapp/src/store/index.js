@@ -10,6 +10,7 @@ import Magazine from './magazine'
 import Designer from './designer'
 import Video from './video'
 import Freetrial from './freetrial'
+import Dwell from './dwell'
 
 
 Vue.use(Vuex);
@@ -35,12 +36,10 @@ const store = new Vuex.Store({
     Case,
     Magazine,
     Designer,
-<<<<<<< HEAD
 		Finish
-=======
 		Video,
-		Freetrial
->>>>>>> yuan
+		Freetrial,
+		Dwell
   }
 });
 

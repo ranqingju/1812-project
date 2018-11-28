@@ -15,11 +15,11 @@
 			</div>
 		</div>
 		
-		<div class="casus" v-for="(item,index) in casusR">
+		<div class="casus" v-for="(item,index) in liveupdateList" :type='item.type'>
 			<div class="casus_bom">
-				<img :src="item.img">
-				<p>{{item.name}}</p>
-				<span>{{item.title}}</span>
+				<img :src="'http://ceshi.qfjava.cn/'+item.liveimage">
+				<p>{{item.title}}</p>
+				<span>{{item.description}}</span>
 			</div>
 		</div>
 	</div>
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+	import Vuex from 'vuex'
 	export default {
 		data() {
 			return {
@@ -60,6 +61,19 @@
 				],
 				
 			}
+		},
+		computed:{
+			...Vuex.mapState({
+				liveupdateList:state=>state.Dwell.liveupdateList
+			})
+		},
+		methods:{
+			...Vuex.mapActions({
+				getliveupdate:'Dwell/getliveupdate'
+			})
+		},
+		created(){
+			this.getliveupdate();	
 		}
 	}
 </script>

@@ -78,7 +78,7 @@
 		display: block;
 		width: 3.3rem;
 		height: 2rem;
-		padding-bottom: .32rem;
+		margin-bottom: .32rem;
 		position: relative;
 	}
 	.matterT>.matter{
@@ -95,7 +95,7 @@
 		background: #4b4b48;
 		opacity: 0.7;
 		position: absolute;
-		top:1.28rem
+		top:1.6rem
 	}
 	
 </style>
