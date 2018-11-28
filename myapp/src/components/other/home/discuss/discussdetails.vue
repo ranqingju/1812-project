@@ -63,18 +63,7 @@
 <script>
 import Vuex from 'vuex';
 export default {
-    name:'discussdetails',
-    data(){
-        return{
-
-        }
-    },
-    methods:{
-        
-    },
-    computed:{
-
-    }
+    name:'discussdetails'
 }
 </script>
 
