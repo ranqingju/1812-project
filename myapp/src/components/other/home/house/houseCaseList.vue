@@ -7,10 +7,10 @@
         </header>
 
         <section>
-            <!-- <img :src="houseList.bimg"> -->
+            <img :src=" 'http://ceshi.qfjava.cn/' + houseList.bimg ">
             <div class="main">
                 <div class="user">
-                    <!-- <img :src="houseList.simg"> -->
+                    <img :src=" 'http://ceshi.qfjava.cn/' + houseList.simg ">
                     <p>{{houseList.caseauthor}}</p>
                 </div>
 
@@ -29,7 +29,7 @@
         </section>
 
         <footer>
-            <li :class="collectStatus? 'collectStyle' : '' "  @click="handleCollect()"><span class="iconfont houseicon1" >&#xe633;</span><b>收藏</b></li>
+            <li :class="collectStatus? 'collectStyle' : '' "  @click="handleCollect(houseList.id)"><span class="iconfont houseicon1" >&#xe633;</span><b>收藏</b></li>
             <li><span class="iconfont houseicon1">&#xe66a;</span><b>42</b></li>
         </footer>
     </div>

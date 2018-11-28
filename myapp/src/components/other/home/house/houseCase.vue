@@ -14,7 +14,7 @@
             <div class="house-cont" v-for="(val,index) in Info" :key="index">
                 <div class="cont-top">
                     <div>
-                        <img :src=" 'http://ceshi.qfjava.cn/' + val.headportrait" @click="handleToList(val.userid),handleGo()">
+                        <img :src=" 'http://ceshi.qfjava.cn/' + val.headportrait" @click="handleToList({id:val.id,simg:val.headportrait,bimg:val.themeimg}),handleGo()">
                         <p>{{val.username}}</p>
                     </div>
 
@@ -22,7 +22,7 @@
                 </div>
                 
                 <div class="cont-bottom">
-                    <img :src=" 'http://ceshi.qfjava.cn/' + val.themeimg" @click="handleToList(val.userid),handleGo()">
+                    <img :src=" 'http://ceshi.qfjava.cn/' + val.themeimg" @click="handleToList({id:val.id,simg:val.headportrait,bimg:val.themeimg}),handleGo()">
                 </div>
             </div>
 
