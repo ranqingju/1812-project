@@ -1,34 +1,36 @@
 <template>
   <div class="discuss">
-      <div class="header">
-          <i class="iconfont" @click="handleBack()">&#xe628;</i>
-          <p>话题讨论</p>
-          <span></span>
-      </div>
-      <div class="navs">
-          <ul>
-              <li class="nav-li" v-for="(val,index) in navs" :key="index" @click="handleClick()">
-                 <router-link to="/discuss/discuss">{{val.title}}</router-link>
-              </li>
-          </ul>
-      </div>
-      <div class="center">
-          <div class="content" v-for="(val,index) in info" :key="index" @click="handleGo()">
-              <span>{{val.title}}</span>
-              <div class="message">
-                  <p>{{val.message}}</p>
-              </div>
-              <div class="img">
-                  <div class="img1"></div>
-                  <div class="img2"></div>
-                  <div class="img3"></div>
-                  <div class="img4"></div>
-              </div>
-              <div class="taolun">
-                  <p>{{val.msg}}</p>
-              </div>
-          </div>
-      </div>
+      
+        <div class="header">
+            <i class="iconfont" @click="handleBack()">&#xe631;</i>
+            <p>话题讨论</p>
+            <span></span>
+        </div>
+        
+            <div class="navs">
+                <ul>
+                    <li class="nav-li" v-for="(val,index) in navs" :key="index" @click="handleClick()">
+                        <router-link to="/discuss/discuss">{{val.title}}</router-link>
+                    </li>
+                </ul>
+            </div>
+            
+                <div class="center">
+                    <div class="content" v-for="(val,index) in info" :key="index" @click="handleGo()">
+                        <span>{{val.title}}</span>
+                        <div class="message">
+                            <p>{{val.message}}</p>
+                        </div>
+                        <div class="img-out">
+                            <div class="img" v-for="(val,index) in navs" :key="index"></div>
+                        </div>
+                        <div class="taolun">
+                            <p>{{val.msg}}</p>
+                        </div>
+                    </div>
+                </div>
+            
+        
     <router-view></router-view>
   </div>
 </template>
@@ -47,12 +49,14 @@ import Vuex from 'vuex';
         ...Vuex.mapState({
             info:state=>state.Discuss.info,
             navs:state=>state.Discuss.navs,
+            imgs:state=>state.Discuss.imgs
         })
     },
     methods:{
         ...Vuex.mapActions({
             handleToList:"Discuss/handleToList",
             handleToNavs:"Discuss/handleToNavs",
+            handleToImgs:"Discuss/handleToImgs"
         }),
         handleClick(){
             
@@ -72,12 +76,15 @@ import Vuex from 'vuex';
 
 <style scoped>
 .discuss{
+    height: 100%;
     background: #F3F2F0;
+    display: flex;
+    flex-direction: column;
 }
+
 .header{
     width: 100%;
     height: .88rem;
-    margin-top: ;
     background: #fff;
     line-height: .88rem;
     display: flex;
@@ -92,6 +99,7 @@ import Vuex from 'vuex';
     font-size: .34rem;
     font-weight: bolder;
 }
+
 .navs{
     width: 100%;
     height: .7rem;
@@ -122,11 +130,13 @@ import Vuex from 'vuex';
 .navs>ul>li:hover{
     border-bottom: 6px solid #FDD768;
 }
+
 .center{
     width: 100%;
-    height: 100%;
     padding: 0 .25rem;
-    margin-top: .3rem;
+    padding-top: .3rem;  
+    flex:1;
+    overflow: auto;
 }
 .center>.content{
     width: 7rem;
@@ -155,7 +165,7 @@ import Vuex from 'vuex';
     font-size: .26rem;
     color: #A0A0A0;
 }
-.center>.content>.img{
+.center>.content>.img-out{
     width: 1.65rem;
     height: .54rem;
 
@@ -164,7 +174,7 @@ import Vuex from 'vuex';
     margin-left: .48rem;
     margin-top: .35rem;
 }
-.center>.content>.img>.img1{
+.center>.content>.img-out>.img:first-child{
     width: .54rem;
     height: .54rem;
     border-radius: 50%;
@@ -172,7 +182,7 @@ import Vuex from 'vuex';
     position:absolute;
     right: 0;
 }
-.center>.content>.img>.img2{
+.center>.content>.img-out>.img:nth-child(2){
     width: .54rem;
     height: .54rem;
     border-radius: 50%;
@@ -180,7 +190,7 @@ import Vuex from 'vuex';
     position:absolute;
     right: .39rem;
 }
-.center>.content>.img>.img3{
+.center>.content>.img-out>.img:nth-child(3){
     width: .54rem;
     height: .54rem;
     border-radius: 50%;
@@ -188,7 +198,7 @@ import Vuex from 'vuex';
     position:absolute;
     right: .78rem;
 }
-.center>.content>.img>.img4{
+.center>.content>.img-out>.img:last-child{
     width: .54rem;
     height: .54rem;
     border-radius: 50%;

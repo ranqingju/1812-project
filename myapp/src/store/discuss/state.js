@@ -43,7 +43,22 @@ export default {
             "title":"生活技能"
         },
     ],
+    imgs:[
+        {
+            "id":"1",
+        },
+        {
+            "id":"2"
+        },
+        {
+            "id":"3"
+        },
+        {
+            "id":"4"
+        }
+    ],
     Index:'',
     discussList:{},
     navsList:{},
+    imgsList:{}
 }

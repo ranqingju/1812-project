@@ -74,7 +74,7 @@
 		
 		.videos {
 			width: 100%;
-			height: 12.04rem;
+			 height: 12.04rem; 
 			display: flex;
 			flex-direction: column;
 		}

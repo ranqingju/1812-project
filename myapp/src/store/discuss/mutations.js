@@ -4,5 +4,8 @@ export default {
     },
     handleToNavs:function(state,index){
         state.navsList = state.navs[index];
+    },
+    handleToImgs:function(state,index){
+        state.imgsList = state.imgs[index];
     }
 }

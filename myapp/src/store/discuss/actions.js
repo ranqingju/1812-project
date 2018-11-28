@@ -4,5 +4,8 @@ export default {
     },
     handleToNavs:function({commit},index){
         commit('handleToNavs',index);
+    },
+    handleToImgs:function({commit},index){
+        commit('handleToImgs',index);
     }
 }

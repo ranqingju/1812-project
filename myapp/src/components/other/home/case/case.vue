@@ -7,15 +7,21 @@
         </div>
         <div class="anniu">
              <div class="anniu1">
-                 <span class="iconfont">&#xe625;</span>
+                 <span class="iconfont" @click="handleAdd()">&#xe625;</span>
              </div>
              <div class="anniu2">
                  <span class="iconfont">&#xe613;</span>
              </div>
              
         </div>
+        <div class="msg-out">
+            <div class="msg">
+                <p @click="handleAdd()">新建案例</p>
+                <p>草稿箱</p>
+            </div>
+        </div>
         <div class="cha">
-            <span class="iconfont">&#xe658;</span>
+            <span class="iconfont" @click="handleBack()">&#xe658;</span>
         </div>
     </div>
 </template>
@@ -23,6 +29,14 @@
 <script>
 export default {
     name:'case',
+    methods:{
+        handleBack(){
+            this.$router.push('/home')
+        },
+        handleAdd(){
+            this.$router.push('/home/house/add/newAddCase')
+        }
+    }
 }
 </script>
 
@@ -52,21 +66,20 @@ export default {
     
     margin-top: 3.81rem;
     margin-left: 1.49rem;
-    display: flex;
-    justify-content: space-between;
+    
 }
 .anniu1{
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    
+    float: left;
     border: 1px solid #030303;
 }
 .anniu2{
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-   
+    float: right;
     border: 1px solid #030303;
 }
 .anniu1>span{
@@ -79,12 +92,26 @@ export default {
     margin-left: .38rem;
     line-height: 1.5rem;
 }
+.msg{
+    width:4.05rem;
+    height: .29rem;
+
+    margin-top: .69rem;
+    margin-left: 1.64rem;
+    display: flex;
+    justify-content: space-between
+}
+.msg>p{
+    font-size: .29rem;
+    line-height: .29rem;
+    
+}
 .cha{
     width: .4rem;
     height: .4rem;
    
     margin-left: 3.56rem;
-    margin-top: 5.28rem;
+    margin-top: 4.39rem;
 }
 .cha>span{
     font-size: .4rem;
