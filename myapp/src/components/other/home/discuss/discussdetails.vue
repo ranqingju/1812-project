@@ -63,7 +63,18 @@
 <script>
 import Vuex from 'vuex';
 export default {
-    name:'discussdetails'
+    name:'discussdetails',
+    data(){
+        return{
+
+        }
+    },
+    methods:{
+        
+    },
+    computed:{
+
+    }
 }
 </script>
 
@@ -77,13 +88,12 @@ export default {
 .qingdan{
     width: 7.01rem;
     height: 5.08rem;
-    background: yellow;
+    background:#fff;
     padding: .46rem 1rem .42rem .99rem;
     position: absolute;
     left: .25rem;
     top: 2.38rem;
     border: 1px solid #ccc;
-    
 }
 .qingdan>h2{
     color: #34343D;
@@ -109,7 +119,7 @@ export default {
 .qingdan>.reply{
     width: .83rem;
     height: .2rem;
-    background: ;
+
     float: left;
     margin-top: .4rem;
     display: flex;
@@ -134,21 +144,21 @@ export default {
 }
 .center{
     width: 100%;
-    height: 9.74rem;
-    background: ;
+    height: 100%;
+
     padding: 0 .23rem 0 .24rem;
 }
 .center>.center-c{
     width: 100%;
     height: 2.97rem;
-    background: ;
+
     margin-top: 4.36rem;
     position: relative;
 }
 .center>.center-c>.center-c-top{
     width: 100%;
     height: .28rem;
-    background: ;
+
 }
 .center-c>.center-c-top>h3{
     font-size: .28rem;
@@ -176,7 +186,7 @@ export default {
 .center-c-mid{
     width: 100%;
     height: .64rem;
-    background: ;
+
     position: relative;
     margin-top: .52rem;
 }
@@ -190,7 +200,7 @@ export default {
 .center-c-mid>.msg{
     width: 1.26rem;
     height: 100%;
-    background: ;
+
     margin-left: .31rem;
     float: left;
     display: flex;
@@ -234,7 +244,7 @@ export default {
 .center-c-bottom{
     width: 6rem;
     height: .82rem;
-    background:;
+
     margin-left: .91rem;
     margin-top: .33rem;
 }
