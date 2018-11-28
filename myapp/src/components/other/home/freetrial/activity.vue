@@ -1,7 +1,7 @@
 <template>
 	<div id="activity">
 		<div class="act_header">
-			<span class="iconfont @click='handleReturn()">&#xe631;</span>
+			<span class="iconfont" @click="handleReturn()">&#xe631;</span>
 			<h2>试用</h2>
 		</div>
 		<div class="act_content">
@@ -10,7 +10,24 @@
 				<p @click='handleGoReport()'>报告</p>
 			</div>
 			<div class="act_cont_flex">
-				<div class="act_cont_details">
+				
+				<div class="act_cont_details" v-for="(item,index) in trialactivityList">
+					<div>
+						<img :src="'http://ceshi.qfjava.cn/'+item.taimage">
+					</div>
+					<div>{{item.title}}</div>
+					<div>
+						<div>
+							<img :src="'http://ceshi.qfjava.cn/'+item.headportrait">
+							<p>{{item.name}}</p>
+						</div>
+						<div>
+							<p>体验评分：</p>
+							<span class="iconfont">&#xe676; &#xe676; &#xe676; &#xe676; &#xe676;</span>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="act_cont_details">
 					<div>
 						<img src="../../../../../static/designer/bg1.jpg">
 					</div>
@@ -41,37 +58,34 @@
 							<span class="iconfont">&#xe676; &#xe676; &#xe676; &#xe676; &#xe676;</span>
 						</div>
 					</div>
-				</div>
-				<div class="act_cont_details">
-					<div>
-						<img src="../../../../../static/designer/bg1.jpg">
-					</div>
-					<div>我的家具我做主，优主意定制家具体验</div>
-					<div>
-						<div>
-							<img src="../../../../../static/designer/bg1.jpg">
-							<p>ide0007</p>
-						</div>
-						<div>
-							<p>体验评分：</p>
-							<span class="iconfont">&#xe676; &#xe676; &#xe676; &#xe676; &#xe676;</span>
-						</div>
-					</div>
-				</div>
+				</div> -->
+				
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+	import Vuex from 'vuex'
 	export default {
+		computed:{
+			...Vuex.mapState({
+				trialactivityList:state=>state.Freetrial.trialactivityList
+			})
+		},
 		methods:{
 			handleReturn(){
-				this.$router.back();
+				this.$router.push("/home");
 			},
 			handleGoReport(){
 				this.$router.push('./report');
-			}
+			},
+			...Vuex.mapActions({
+				getalltrialactivity:"Freetrial/getalltrialactivity"
+			})
+		},
+		created(){
+			this.getalltrialactivity();
 		}
 	}
 </script>
@@ -138,10 +152,10 @@
 		/* 内容区图片 */
 		.act_content>.act_cont_flex>.act_cont_details {
 			width: 100%;
-			height: 5rem;
 			display: flex;
 			flex-direction: column;
 			padding: 34px 28px 0 28px;
+			margin-bottom: 0.2rem;
 		}
 		
 		.act_content>.act_cont_flex>.act_cont_details>div:nth-child(1) {

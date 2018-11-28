@@ -98,10 +98,10 @@ input,button{
     width: 5rem;
     height: 0.86rem;
     margin-left: 60px;
-    font-size: 30px;
-    border: 0;
-    outline: none;
-		background: transparent;
+    font-size: 40px;
+    border: none;
+    color: #bdbdbd;
+	outline:none
 }
 .fd > button {
 		border: 0;

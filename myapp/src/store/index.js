@@ -8,7 +8,8 @@ import Discuss from './discuss';
 import Case from './case';
 import Magazine from './magazine'
 import Designer from './designer'
-import Finish from './finish'
+import Video from './video'
+import Freetrial from './freetrial'
 
 
 Vue.use(Vuex);
@@ -34,7 +35,12 @@ const store = new Vuex.Store({
     Case,
     Magazine,
     Designer,
+<<<<<<< HEAD
 		Finish
+=======
+		Video,
+		Freetrial
+>>>>>>> yuan
   }
 });
 
