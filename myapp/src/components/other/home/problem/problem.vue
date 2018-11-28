@@ -21,7 +21,8 @@
 <style scoped>
   .problem {
     height: 100%;
-    overflow: auto;
     background: rgba(243, 242, 240, 1);
+    display: flex;
+    flex-direction: column;
   }
 </style>

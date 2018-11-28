@@ -24,8 +24,10 @@
     background: url("/static/home/zj01.jpg");
     background-size: cover;
     padding: 0.37rem 0 0 0.24rem;
-    position: relative;
+    top: 0;
+    left: 0;
     font-family: "微软雅黑", "宋体", "arial", "Hiragino Sans GB", "Microsoft Yahei", "Tahoma", "Helvetica", "STHeiti";
+    position: relative;
   }
 
   .header > span {
@@ -38,8 +40,8 @@
     height: 2rem;
     background: #fff;
     box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.11);
-    position: absolute;
-    bottom: -1.52rem;
+    position: fixed;
+    top: 4.52rem;
     padding: 0.1rem 0 0 0.26rem;
   }
 
@@ -47,6 +49,7 @@
     font-size: 36px;
     color: #242526;
     line-height: 0.76rem;
+    letter-spacing: 2px;
   }
 
   .header > .title > p {

@@ -1,7 +1,7 @@
 <template>
   <div class="content">
 
-    <div class="proList" v-for="" @click="goToAnswer()">
+    <div class="proList" v-for="(item) in proList" @click="goToAnswer()">
       <img src="static/home/zj02.jpg"/>
       <div class="list_r">
         <h3>可不可以不吊顶？</h3>
@@ -26,6 +26,17 @@
 
 <script>
   export default {
+    data(){
+      return{
+        proList:[
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
     methods:{
       goToAnswer(){
         this.$router.push('/home/problem/answer');
@@ -38,6 +49,8 @@
   .content {
     padding: 1.52rem 0.24rem 0;
     font-family: "微软雅黑", "宋体", "arial", "Hiragino Sans GB", "Microsoft Yahei", "Tahoma", "Helvetica", "STHeiti";
+    flex: 1;
+    overflow: auto;
   }
 
   /*列表*/
