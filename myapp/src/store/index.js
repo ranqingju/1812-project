@@ -11,6 +11,7 @@ import Designer from './designer'
 import Video from './video'
 import Freetrial from './freetrial'
 import Dwell from './dwell'
+import Finish from './finish'
 
 
 Vue.use(Vuex);
@@ -36,7 +37,7 @@ const store = new Vuex.Store({
     Case,
     Magazine,
     Designer,
-		Finish
+		Finish,
 		Video,
 		Freetrial,
 		Dwell
