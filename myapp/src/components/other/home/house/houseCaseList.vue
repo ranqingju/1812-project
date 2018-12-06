@@ -7,10 +7,10 @@
         </header>
 
         <section>
-            <img :src=" 'http://ceshi.qfjava.cn/' + houseList.bimg ">
+            <img :src=" 'http://ceshi.qfjava.cn/' + (houseList.bimg? houseList.bimg : '/group1/M00/00/00/rB8xvlvpIDCARlIgAAFmRuqQoeU871.jpg') ">
             <div class="main">
                 <div class="user">
-                    <img :src=" 'http://ceshi.qfjava.cn/' + houseList.simg ">
+                    <img :src=" 'http://ceshi.qfjava.cn/' + (houseList.simg?houseList.simg : '/group1/M00/00/00/rB8xvlvpIDCARlIgAAFmRuqQoeU871.jpg') ">
                     <p>{{houseList.caseauthor}}</p>
                 </div>
 
@@ -30,8 +30,15 @@
 
         <footer>
             <li :class="collectStatus? 'collectStyle' : '' "  @click="handleCollect(houseList.id)"><span class="iconfont houseicon1" >&#xe633;</span><b>收藏</b></li>
-            <li><span class="iconfont houseicon1">&#xe66a;</span><b>42</b></li>
+            <li @click='handleToCollection()'><span class="iconfont houseicon1">&#xe66a;</span><b>我的收藏</b></li>
         </footer>
+
+
+        <transition name="send">
+            <div class="collect" v-show="status">
+                <h2>收藏成功</h2>
+            </div>
+        </transition>
     </div>
 </template>
 
@@ -41,7 +48,7 @@
     export default {
         data(){
             return{
-
+    
             }
         },
         created(){
@@ -50,7 +57,8 @@
         computed:{
             ...Vuex.mapState({
                 houseList:state=>state.HouseCase.houseList,
-                collectStatus:state=>state.HouseCase.collectStatus
+                collectStatus:state=>state.HouseCase.collectStatus,
+                status:state=>state.HouseCase.status
             })
         },
         methods:{
@@ -59,8 +67,10 @@
                 Init:'HouseCase/Init'
             }),
             handleGo:function(){
-                // this.$router.push('/home/house/houseCase');
-                 this.$router.back();
+                 this.$router.push('/home/house/houseCase');
+            },
+            handleToCollection:function(){
+                this.$router.push('/home/house/houseCollect');
             }
         }
     }
@@ -83,6 +93,7 @@
         padding:0 0.28rem;
         background: #fff;
         letter-spacing: .1rem;
+        background: #FEDA44;
     }
     #houseCaseList>header>.back{
         color:#000;
@@ -94,6 +105,7 @@
     }
     #houseCaseList>section>img{
         width:100%;
+        height:500px;
     }
     #houseCaseList>section>.main{
         padding: 0 0.28rem;
@@ -176,5 +188,36 @@
     }
     #houseCaseList>footer>.collectStyle{
         color:yellow;
+    }
+    /* 提示信息 */
+    #houseCaseList .collect{
+        width:2rem;
+        height:1rem;
+        background:orangered;
+        color:#fff;
+        position: fixed;
+        top:0;bottom: 0;
+        left:0;right:0;
+        margin:auto;
+        text-align: center;
+        line-height: 1rem;
+        border-radius: .2rem;
+    }
+     /* 动画 */
+    .send-enter{
+        /* bottom:0;
+        left:50%;
+        margin-left:-1rem; */
+        opacity: 0;
+    }
+    .send-enter-active{
+        transition: all 2s;
+    }
+    .send-enter-to{
+        /* bottom:50%;
+        left:50%;
+        margin-left:-1rem;
+        margin-bottom:-0.5rem; */
+        opacity: 1;
     }
 </style>

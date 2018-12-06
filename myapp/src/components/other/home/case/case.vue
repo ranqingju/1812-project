@@ -10,14 +10,14 @@
                  <span class="iconfont" @click="handleAdd()">&#xe625;</span>
              </div>
              <div class="anniu2">
-                 <span class="iconfont">&#xe613;</span>
+                 <span @click="handleDrafs()" class="iconfont">&#xe613;</span>
              </div>
              
         </div>
         <div class="msg-out">
             <div class="msg">
                 <p @click="handleAdd()">新建案例</p>
-                <p>草稿箱</p>
+                <p @click="handleDrafs()">草稿箱</p>
             </div>
         </div>
         <div class="cha">
@@ -34,7 +34,10 @@ export default {
             this.$router.push('/home')
         },
         handleAdd(){
-            this.$router.push('/home/house/add/newAddCase')
+            this.$router.push('/home/house/add/newAddCase');
+        },
+        handleDrafs(){
+            this.$router.push('/home/house/add/drafts');
         }
     }
 }

@@ -1,29 +1,38 @@
 <template>
     <div id="newAddCase">
+
         <div class="newAdd-top">
             <span class="iconfont back" @click="handleBack()">&#xe631;</span>
             <h2>新增案例</h2>
             <div>
-                <span @click="handleSave()">保存</span>
-                <span @click="handleSend()">发布</span>
+                <span @click="handleSave();handleSaveToDrafs(info)">保存</span>
+                <span @click="handleSend();handleSendToCase(info)">发布</span>
             </div>
         </div>
 
-        <div class="border"></div>
+        <!-- <div class="border"></div> -->
 
         <div class="main">
             <p><span>标题:</span><input type="text" v-model="info.tit"></p>
+
             <div><p>前言:</p><textarea v-model="info.msg"></textarea></div>
+
             <div>
                 <span>户型:</span>
                 <p><a href="##" :class="Index==1? 'active' :'' " @click="handleType([1,'一室'])">一室</a><a href="##" :class="Index==2? 'active' :'' " @click="handleType([2,'二室'])">二室</a></p>
                 <p><a href="##" :class="Index==3? 'active' :'' " @click="handleType([3,'三室'])">三室</a><a href="##" :class="Index==4? 'active' :'' " @click="handleType([4,'四室'])">四室</a></p>
                 <p><a href="##" :class="Index==5? 'active' :'' " @click="handleType([5,'五室'])">五室</a><a href="##" :class="Index==6? 'active' :'' " @click="handleType([6,'五室以上'])">五室以上</a></p>
             </div>
+
             <p><span>面积:</span><input type="text" v-model="info.m2"></p>
+
             <p><span>城市:</span><input type="text" v-model="info.city"></p>
+
             <p><span>花费:</span><input type="text" v-model="info.price"></p>
         </div>
+
+
+
         <transition name="save">
             <div class="save" v-show="flag">
                 <h2>保存成功</h2>
@@ -59,9 +68,6 @@
                 flag2:false
             }
         },
-        created(){
-         
-        },
         computed:{
             ...Vuex.mapState({
                
@@ -69,13 +75,11 @@
         },
         methods:{
             ...Vuex.mapActions({
-                
+                handleSaveToDrafs:'HouseCase/handleSaveToDrafs',
+                handleSendToCase:'HouseCase/handleSendToCase'
             }),
-            handleGo:function(){
-               
-            },
             handleBack:function(){
-                
+                this.$router.back();
             },
             handleType:function(data){
                 this.Index = data[0];
@@ -120,6 +124,7 @@
         justify-content: space-between;
         align-items: center;
         letter-spacing:.1rem;
+        background: #FEDA44;
     }
     #newAddCase>.newAdd-top>.back{
         font-size:.35rem;

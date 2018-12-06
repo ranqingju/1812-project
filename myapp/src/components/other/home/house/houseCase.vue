@@ -79,6 +79,7 @@
         justify-content: space-between;
         align-items: center;
         letter-spacing:.1rem;
+        background: #FEDA44;
     }
     #house-case>.border{
         border-bottom:1px solid #C9C9C9;
