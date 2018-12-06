@@ -2,7 +2,7 @@
     <div id="house-collect">
 
         <div class="house-top">
-            <span class="iconfont back">&#xe631;</span>
+            <span class="iconfont back" @click="handleBack()">&#xe631;</span>
             <h2>我的收藏</h2>
             <span class="iconfont search"></span>
         </div>
@@ -11,18 +11,18 @@
 
         <div class="house-center">
 
-            <div class="house-cont" v-for="(val,index) in houseCollect" :key="index">
+            <div class="house-cont" v-for="(val,index) in myCollection" :key="index">
                 <div class="cont-top">
                     <div>
-                        <img :src="val.simg" @click="handleToList(index),handleGo()">
-                        <p>{{val.tit}}</p>
+                        <img :src=" 'http://ceshi.qfjava.cn/' + val.headportrait" @click="handleToList({id:val.id,simg:val.headportrait,bimg:val.themeimg})">
+                        <p>{{val.casecontent}}</p>
                     </div>
 
-                    <p>{{val.mes}}</p>
+                    <p>{{val.theme}}</p>
                 </div>
                 
                 <div class="cont-bottom">
-                    <img :src="val.bimg" @click="handleToList(index),handleGo()">
+                    <img :src=" 'http://ceshi.qfjava.cn/' +val.themeimg" @click="handleToList({id:val.id,simg:val.headportrait,bimg:val.themeimg});handleGo()">
                 </div>
             </div>
 
@@ -41,19 +41,24 @@
             }
         },
         created(){
-            
+            this.getMyCollection()
         },
         computed:{
             ...Vuex.mapState({
-                houseCollect:state=>state.HouseCase.houseCollect
+                myCollection:state=>state.HouseCase.myCollection
             })
         },
         methods:{
             ...Vuex.mapActions({
-                handleCollectToList:'HouseCase/handleToList'
+                handleToList:'HouseCase/handleToList',
+                getMyCollection:'HouseCase/getMyCollection'
             }),
+            handleBack:function(){
+                this.$router.back();
+            },
             handleGo:function(){
                 this.$router.push('/home/house/houseCaseList');
+                
             }
         }
     }   
@@ -74,6 +79,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background: #FEDA44;
     }
     #house-collect>.border{
         border-bottom:1px solid #C9C9C9;
@@ -108,12 +114,13 @@
         margin-right:.17rem;
     }
     #house-collect>.house-center>.house-cont>.cont-top>div>p{
-        font-size:30px;
+        font-size:.26rem;
         font-weight:400;
+        width:3rem;
         color:rgba(23,23,23,1);
     }
     #house-collect>.house-center>.house-cont>.cont-top>p{
-        font-size:24px;
+        font-size:.24rem;
         font-weight:400;
         color:rgba(23,23,23,1);
     }
@@ -123,7 +130,7 @@
     }
     #house-collect>.house-center>.house-cont>.cont-bottom>img{
          width:100%;
-         height:100%;
+         height:3.3rem;
          border-radius:.1rem;
     }
 

@@ -1,12 +1,14 @@
 export default {
-    // 存储所有信息
+    // 案列列表信息
     Info:[],
-    // 存储当前下标
-    ID:null,
-    // 存储当前信息
+    // 案列详情信息
     houseList:{},
-    // 存储收藏的信息
-    houseCollect:[],
-    // 默认收藏按钮状态
-    collectStatus:false
+    // 收藏成功状态
+    collectStatus:0,
+    // 收藏提示信息状态
+    status:0,
+    // 我的收藏 信息
+    myCollection:[],
+    // 我的草稿箱信息
+    drafts:[]
 }
