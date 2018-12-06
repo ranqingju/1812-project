@@ -6,15 +6,11 @@
       <div class="form">
         <p>
           <span>QQ账号</span>
-          <span class="iconfont">&#xe665;</span>
+          <span class="iconfont"><i>绑定</i> &#xe665;</span>
         </p>
         <p>
           <span>新浪账号</span>
-          <span class="iconfont">&#xe665;</span>
-        </p>
-        <p>
-          <span>更改头像</span>
-          <span class="iconfont">&#xe665;</span>
+          <span class="iconfont"><i>绑定</i> &#xe665;</span>
         </p>
         <p>
           <span>免费订阅</span>
@@ -22,6 +18,10 @@
         </p>
         <p>
           <span>清理杂志</span>
+          <span class="iconfont">&#xe665;</span>
+        </p>
+        <p>
+          <span>清理缓存</span>
           <span class="iconfont">&#xe665;</span>
         </p>
         <p>
@@ -99,6 +99,14 @@
   .setUp > .setUp_bot > .form > p > span:nth-of-type(2) {
     font-size: 32px;
     color: #6D6D6C;
+  }
+
+  /*绑定*/
+  .setUp > .setUp_bot > .form > p > span:nth-of-type(2)>i{
+    display: inline-block;
+    font-size:24px;
+    color: #666;
+    line-height: 0.47rem;
   }
 
   .setUp > .setUp_bot > .form > button {

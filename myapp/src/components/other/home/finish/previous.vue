@@ -3,7 +3,7 @@
 		
 		<div class="header">
 			<i class="iconfont" @click="hannd()">&#xe631;</i>
-			<img src="../../../../../static/designer/bg1.jpg" alt="">
+			<img src="static/home/timg.jpg" alt="">
 			<p>前期准备</p>
 		</div>
 		<p class="pp">装修前需要准备什么？前期需做足功课，选定设计方案，了解合同 
@@ -87,14 +87,16 @@ export default {
 		overflow: hidden;
 	}
 	.header>img{
-		width: 100%;
+    width: 100%;
 	}	
 	.header>i{
 		font-size: 30px;
-		color: #6d6d6c;
+		color: #000;
 		position: absolute;
 		left: 25px;
 		top: 50px;
+    background: rgba(255,255,255,.9);
+    border-radius: 50%;
 	}
 	.header>p{
 		font-size: 33px;
@@ -102,18 +104,19 @@ export default {
 		position: absolute;
 		left: 40px;
 		top: 335px;
+    color: #000;
 	}
 	.pp{
 		display: block;
-		font-size:28px ;
+		font-size:24px;
+    color: #171717;
 		width: 6.9rem;
-		/* display: flex;
-		justify-content: center; */
 		padding-left: 33px;
 		padding-top:57px ;
 	}
 	.ppp{
-		font-size: 30px;
+		font-size: 36px;
+    color: #171717;
 		font-weight: 900;
 		padding-left: 30px;
 		padding-top: 42px;

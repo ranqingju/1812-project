@@ -38,11 +38,18 @@
 						img: "static/designer/mat_03.jpg",
 						name: "恒洁智能 卫浴升级改造招募令"
 					},
-					
 					{
 						img: "static/designer/mat_03.jpg",
 						name: "恒洁智能 卫浴升级改造招募令"
 					},
+          {
+            img: "static/designer/mat_03.jpg",
+            name: "恒洁智能 卫浴升级改造招募令"
+          },
+          {
+            img: "static/designer/mat_03.jpg",
+            name: "恒洁智能 卫浴升级改造招募令"
+          },
 				]
 			}
 		}
@@ -61,6 +68,11 @@
 		padding-top: .32rem;
 		padding-bottom: .19rem;
 	}
+
+  .wealBot>.headline>h3{
+    font-size: 30px;
+    color: #7a7a7a;
+  }
 
 	.wealBot>h2 {
 		display: block;
@@ -92,7 +104,7 @@
 		font-size: 22px;
 		text-align: center;
 		color: #fff;
-		background: #4b4b48;
+		background: rgba(0,0,0,0.3);
 		opacity: 0.7;
 		position: absolute;
 		top:1.6rem

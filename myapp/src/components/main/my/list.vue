@@ -1,11 +1,11 @@
 <template>
 	<div id="lists">
 		<div>
-			<div>
+			<div @click="goToDrafs()">
 				<span class="iconfont">&#xe613;</span>
 				<p>草稿箱</p>
 			</div>
-			<div>
+			<div @click="goToCaseList()">
 				<span class="iconfont">&#xe625;</span>
 				<p>我的整屋案例</p>
 			</div>
@@ -15,7 +15,7 @@
 			</div>
 		</div>
 		<div>
-			<div>
+			<div @click="goToMyCollect()">
 				<span class="iconfont">&#xe623;</span>
 				<p>我的收藏</p>
 			</div>
@@ -48,6 +48,7 @@
 <script>
 	export default {
     methods:{
+      /*话题收藏*/
       goToTopicCol(val){
         this.$router.push({
           path:'/my/topic_col',
@@ -56,6 +57,7 @@
           }
         });
       },
+      /*我的小区*/
       goToHouseArea(val){
         this.$router.push({
           path:'/my/house_area',
@@ -64,6 +66,7 @@
           }
         });
       },
+      /*设置*/
       goToSetUp(val){
         this.$router.push({
           path:'/my/setUp',
@@ -72,6 +75,7 @@
           }
         });
       },
+      /*我的试用*/
       goToTrial(val){
         this.$router.push({
           path:'/my/trial',
@@ -80,6 +84,7 @@
           }
         });
       },
+      /*我的文章*/
       goToArticle(val){
         this.$router.push({
           path:'/my/article',
@@ -87,6 +92,18 @@
             headName:val
           }
         });
+      },
+      /*草稿箱*/
+      goToDrafs(){
+        this.$router.push('/home/house/add/drafts');
+      },
+      /*我的整屋案例*/
+      goToCaseList(){
+        this.$router.push('/home/house/houseCase');
+      },
+      /*我的收藏*/
+      goToMyCollect(){
+        this.$router.push('/home/house/houseCollect');
       }
     }
 	}

@@ -12,7 +12,7 @@
   export default {
     methods:{
       handleGoto(){
-        this.$router.back();
+        this.$router.push('/home');
       }
     }
   }

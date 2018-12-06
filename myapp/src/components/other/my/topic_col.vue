@@ -4,7 +4,7 @@
     <header-com></header-com>
     <div class="topic_bot">
       <span class="iconfont">&#xe841;</span>
-      <span>空空如也!</span>
+      <span>您还没有收藏，快去收藏！</span>
     </div>
   </div>
 </template>
@@ -42,7 +42,7 @@
   }
 
   .topic_col > .topic_bot > span:nth-of-type(2) {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
   }
 </style>

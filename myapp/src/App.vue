@@ -14,6 +14,6 @@
   /*留出手机自带状态栏的空*/
   #app {
     height: 100%;
-    padding-top: 0.4rem;
+    /*padding-top: 0.4rem;*/
   }
 </style>

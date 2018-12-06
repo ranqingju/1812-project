@@ -25,8 +25,7 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		border-bottom: 2px solid #969494;
-		
+		border-bottom: 1px solid #969494;
 	}
 	.wealTop>h2{
 		font-size: 36px;

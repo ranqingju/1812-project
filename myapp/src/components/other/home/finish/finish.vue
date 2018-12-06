@@ -11,13 +11,13 @@
 		 -->
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide" id="banner">
+				<div class="swiper-slide banner">
 					<img src="../../../../../static/images/1.jpg" alt="">
 				</div>
-				<div class="swiper-slide" id="banner">
+				<div class="swiper-slide banner">
 					<img src="../../../../../static/images/1.jpg" alt="">
 				</div>
-				<div class="swiper-slide" id="banner">
+				<div class="swiper-slide banner">
 					<img src="../../../../../static/images/1.jpg" alt="">
 				</div>
 			</div>
@@ -152,11 +152,11 @@ export default {
 }
 
 /* banner */
-#banner {
+.banner {
     display: flex;
     justify-content: center;
 }
-#banner > img {
+.banner > img {
     width: 7.02rem;
     height: 3.14rem;
     padding-top: 30px;
@@ -195,7 +195,7 @@ export default {
 	width: 40px !important;
     height: 8px;
     display: inline-block;
-    border-radius: none;
+    border-radius: 0;
     background: #000;
     opacity: 0.2;
 }

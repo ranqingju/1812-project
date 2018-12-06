@@ -5,7 +5,7 @@ export default {
   /*获取所有杂志*/
   getMagazine({commit}) {
     Indicator.open('正在加载');
-
+    axios.defaults.timeout = 2000;
     axios({
       method: 'get',
       url: '/usermodule-1.0/magazine/getmagazine'
@@ -19,12 +19,12 @@ export default {
         Indicator.close();
       },2000)
     });
-    setTimeout(()=>{
+   /* setTimeout(()=>{
       Indicator.close();
       Indicator.open('加载失败');
       setTimeout(()=>{
         Indicator.close();
       },2000)
-    },2000);
+    },2000);*/
   }
 }

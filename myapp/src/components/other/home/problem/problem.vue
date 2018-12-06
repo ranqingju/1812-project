@@ -8,12 +8,21 @@
 <script>
   import Header from './problem/header'
   import Content from './problem/content'
+  import Vuex from 'vuex'
 
   export default {
     name: "problem",
     components: {
       'header-com': Header,
       'content-com': Content
+    },
+    methods:{
+      ...Vuex.mapActions({
+        getProblem:'Problem/getProblem'
+      })
+    },
+    created(){
+      this.getProblem();
     }
   }
 </script>

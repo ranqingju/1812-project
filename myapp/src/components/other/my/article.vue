@@ -4,7 +4,7 @@
     <header-com></header-com>
     <div class="article_bot">
       <span class="iconfont">&#xe841;</span>
-      <span>空空如也!</span>
+      <span>您还没有添加，快去添加！</span>
     </div>
   </div>
 </template>
@@ -41,7 +41,7 @@
   }
 
   .article > .article_bot > span:nth-of-type(2) {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
   }
 </style>

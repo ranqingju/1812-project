@@ -1,11 +1,11 @@
 /*更新网上的iconfont时，需要更换下方代码*/
 @font-face {
   font-family: 'iconfont';  /* project id 911292 */
-  src: url('//at.alicdn.com/t/font_911292_4p0oy0guigw.eot');
-  src: url('//at.alicdn.com/t/font_911292_4p0oy0guigw.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_911292_4p0oy0guigw.woff') format('woff'),
-  url('//at.alicdn.com/t/font_911292_4p0oy0guigw.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_911292_4p0oy0guigw.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_911292_fpeeyfl9hhv.eot');
+  src: url('//at.alicdn.com/t/font_911292_fpeeyfl9hhv.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_911292_fpeeyfl9hhv.woff') format('woff'),
+  url('//at.alicdn.com/t/font_911292_fpeeyfl9hhv.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_911292_fpeeyfl9hhv.svg#iconfont') format('svg');
 }
 
 /*固定样式*/

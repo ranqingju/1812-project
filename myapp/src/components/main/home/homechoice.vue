@@ -63,7 +63,9 @@
 	export default {
 		methods:{
 			handleGoToDis(){
-				this.$router.push('/home/problem/answer')
+				this.$router.push({
+          name:'answer'
+        })
 			},
 			
 			handleGoToPr(){
@@ -75,7 +77,7 @@
 
 <style scoped>
 	.choiceT {
-		padding: 0 .25rem;
+		padding: 0.64rem .25rem 0;
 		background:#f3f2f0 ;
 	}
 
@@ -86,7 +88,6 @@
 	}
 
 	.choice>h2 {
-		/* padding-left: .25rem; */
 		font-size: 36px;
 		color: #0F0F0D;
 		line-height: 36px;

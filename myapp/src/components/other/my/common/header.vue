@@ -43,5 +43,6 @@
     font-size: 36px;
     color: #34343D;
     font-weight:bold;
+    font-family: "微软雅黑";
   }
 </style>

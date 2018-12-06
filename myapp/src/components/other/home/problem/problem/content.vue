@@ -1,17 +1,17 @@
 <template>
   <div class="content">
 
-    <div class="proList" v-for="(item) in proList" @click="goToAnswer()">
-      <img src="static/home/zj02.jpg"/>
+    <div class="proList" v-for="(item,index) in problemList" @click="goToAnswer(item.id)">
+      <img :src="item.bigImg"/>
       <div class="list_r">
-        <h3>可不可以不吊顶？</h3>
-        <p>吊顶，远离大白顶的好办法</p>
+        <h3>{{item.title}}</h3>
+        <p>{{item.desc}}</p>
         <div class="list_b">
           <em>
             <span>
-              <img src="static/login/img_login.jpg"/>
+              <img :src="item.smallImg"/>
             </span>
-            <span>来自：热家居</span>
+            <span>来自：{{item.name}}</span>
           </em>
           <em>
             <i>立即查看</i>
@@ -25,22 +25,20 @@
 </template>
 
 <script>
+  import Vuex from 'vuex'
   export default {
-    data(){
-      return{
-        proList:[
-          1,
-          2,
-          3,
-          4,
-          5
-        ]
+    methods:{
+      goToAnswer(val){
+        this.$router.push({
+          name:'answer',
+          query:{id:val}
+        });
       }
     },
-    methods:{
-      goToAnswer(){
-        this.$router.push('/home/problem/answer');
-      }
+    computed:{
+      ...Vuex.mapState({
+        problemList:state=>state.Problem.problemList
+      })
     }
   }
 </script>

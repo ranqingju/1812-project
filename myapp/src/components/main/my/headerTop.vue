@@ -1,31 +1,43 @@
 <template>
 	<div id="header_t">
 		<div>
-			<div>
+			<!--<div>
 				<span></span>
 				<p>关注</p>
 				<span></span>
 			</div>
-			<p>20</p>
+			<p>20</p>-->
 		</div>
 		<div>
 			<img src="static/login/img_login.jpg">
 			<h2>一枚小匠</h2>
 		</div>
 		<div>
-			<div>
+			<!--<div>
 				<span></span>
 				<p>积分</p>
 				<span></span>
 			</div>
-			<p>20</p>
+			<p>20</p>-->
 		</div>
+    <div class="thumbs" @click="goToThumbs('点赞')">
+      <i class="iconfont">&#xe611;</i>
+    </div>
 	</div>
 </template>
 
 <script>
 	export default {
-
+    methods:{
+      goToThumbs(val){
+        this.$router.push({
+          path:'/my/thumbs',
+          query:{
+            headName:val
+          }
+        });
+      }
+    }
 	}
 </script>
 
@@ -36,6 +48,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+    position: relative;
 	}
 
 	#header_t>div:nth-child(1) {
@@ -116,4 +129,14 @@
 		align-items: center;
 		width: 100%;
 	}
+
+  #header_t>.thumbs{
+    position: absolute;
+    right: 0.19rem;
+    top: 0.35rem;
+  }
+
+  #header_t>.thumbs>i{
+    font-size: 50px;
+  }
 </style>

@@ -65,7 +65,7 @@ import Vuex from 'vuex';
         //     this.$router.push("/discuss/details")
         // }
         handleGo(){
-            this.$router.push('/discuss/discussdetails')
+            // this.$router.push('/discuss/discussdetails')
         },
         handleBack(){
             this.$router.push('/home')

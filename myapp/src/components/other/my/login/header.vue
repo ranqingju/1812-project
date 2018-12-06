@@ -13,7 +13,7 @@
         <input :type="pwd_txt" v-model="pwd_login" placeholder="密码" @input="changeInput({val:pwd_login,index:1})">
         <span class="iconfont" v-html="pwd_show_hide" @click="handleChangePwd()"></span>
       </p>
-      <button @click="handleLogin()">登录</button>
+      <button @click="handleLogin(),goToHome()">登录</button>
       <button @click="handleGoTo()">注册</button>
     </div>
   </div>
@@ -50,7 +50,10 @@
         changeInput:'Login/changeInput',
         /*点击登录*/
         handleLogin: 'Login/handleLogin'
-      })
+      }),
+      goToHome(){
+          this.$router.push('/main');
+      }
     }
   }
 </script>

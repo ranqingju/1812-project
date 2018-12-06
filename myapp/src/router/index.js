@@ -8,11 +8,11 @@ HOME
 */
 /*首页*/
 /*import Home from '@/components/main/home';*/
-const Home = ()=>import('@/components/main/home');
+const Home = () => import('@/components/main/home');
 
 /*整屋案例*/
 import houseCase from '@/components/other/home/house/houseCase';
-/*案列详情页*/ 
+/*案列详情页*/
 import houseCaseList from '@/components/other/home/house/houseCaseList';
 
 /*我的收藏*/
@@ -20,7 +20,7 @@ import houseCollect from '@/components/other/home/house/houseCollect';
 /*新增案列*/
 import newAddCase from '@/components/other/home/house/add/newAddCase';
 /*草稿箱*/
-import drafts from '@/components/other/home/house/add/drafts';  
+import drafts from '@/components/other/home/house/add/drafts';
 
 /*话题讨论*/
 import Discuss from '@/components/other/home/discuss/discuss'
@@ -98,15 +98,24 @@ import Trial from '@/components/other/my/trial'
 import Article from '@/components/other/my/article'
 
 /*积分兑换*/
-import credits from '@/components/other/home/credits/credits';
+import credits from '@/components/other/home/credits/credits'
+
+/*欢迎*/
+import Welcome from '@/components/welcome'
 
 Vue.use(Router);
 
-export default new Router({
-  routes: [{
-    path: '/',
-    redirect: '/home'
-  },
+const router = new Router({
+  routes: [
+    {
+      path: '/',
+      redirect: '/welcome'
+    },
+    {
+      path: '/welcome',
+      name: 'Welcome',
+      component: Welcome
+    },
     {
       path: '/',
       component: Main,
@@ -152,16 +161,16 @@ export default new Router({
       name: 'houseCaseList',
       component: houseCaseList
     },
-		{
-			path: '/home/house/add/newAddCase',
-			name: 'newAddCase',
-			component: newAddCase
-		},
-		{
-			path: '/home/house/add/drafts',
-			name: 'drafts',
-			component: drafts
-		},
+    {
+      path: '/home/house/add/newAddCase',
+      name: 'newAddCase',
+      component: newAddCase
+    },
+    {
+      path: '/home/house/add/drafts',
+      name: 'drafts',
+      component: drafts
+    },
     {
       path: '/discuss/discuss',
       name: 'discuss',
@@ -193,13 +202,13 @@ export default new Router({
       component: Thumbs
     },
     {
-      path:'/my/trial',
-      name:'trial',
+      path: '/my/trial',
+      name: 'trial',
       component: Trial
     },
     {
-      path:'/my/article',
-      name:'article',
+      path: '/my/article',
+      name: 'article',
       component: Article
     },
     {
@@ -272,4 +281,25 @@ export default new Router({
       redirect: '/home'
     }
   ]
-})
+});
+
+router.beforeEach((to,form,next)=>{
+  const nextRoute = ['home'];
+  let isLogin = Boolean(localStorage.curUser);
+  // 未登录状态；当路由到nextRoute指定页时，跳转至login
+  if (nextRoute.indexOf(to.name) >= 0) {
+    if (!isLogin) {
+      router.push({ name:'login'})
+    }
+  }
+  // 已登录状态；当路由到login时，跳转至home
+  if (to.name === 'login') {
+    if (isLogin) {
+      router.push('/main');
+    }
+  }
+  next();
+});
+
+
+export default router;
